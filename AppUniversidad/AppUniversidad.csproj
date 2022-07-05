@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A01F0988-FD9F-4718-8C3E-21BCEF25A7B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AppUniversidad</RootNamespace>
+    <AssemblyName>AppUniversidad</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Alumno.cs" />
+    <Compile Include="Class\Materia.cs" />
+    <Compile Include="Class\Profesor.cs" />
+    <Compile Include="Class\UserAdm.cs" />
+    <Compile Include="Forms\InscripcionCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InscripcionCarrera.Designer.cs">
+      <DependentUpon>InscripcionCarrera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuAlumnos.Designer.cs">
+      <DependentUpon>MenuAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuProfesor.Designer.cs">
+      <DependentUpon>MenuProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuUserAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuUserAdm.Designer.cs">
+      <DependentUpon>MenuUserAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UsuarioNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UsuarioNuevo.Designer.cs">
+      <DependentUpon>UsuarioNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DB_Entity_Universidad.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_Entity_Universidad.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DB_Entity_Universidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_Entity_Universidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DB_Entity_Universidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_Entity_Universidad.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Table_Alumno_DB.cs">
+      <DependentUpon>DB_Entity_Universidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Table_Profesor_DB.cs">
+      <DependentUpon>DB_Entity_Universidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\InscripcionCarrera.resx">
+      <DependentUpon>InscripcionCarrera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuAlumnos.resx">
+      <DependentUpon>MenuAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuProfesor.resx">
+      <DependentUpon>MenuProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UsuarioNuevo.resx">
+      <DependentUpon>UsuarioNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="Model\DB_Entity_Universidad.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DB_Entity_Universidad.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\DB_Entity_Universidad.edmx.diagram">
+      <DependentUpon>DB_Entity_Universidad.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AppUniversidad.Model.DB_Entity_Universidad.datasource" />
+    <None Include="Properties\DataSources\AppUniversidad.Model.Table_Alumno_DB.datasource" />
+    <None Include="Properties\DataSources\AppUniversidad.Model.Table_Profesor_DB.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monkey-nft-design-template-7193ee0afdf49d346d58217b2f9cdcc2_screen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\DB_Entity_Universidad.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DB_Entity_Universidad.Context.cs</LastGenOutput>
+      <DependentUpon>DB_Entity_Universidad.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model\DB_Entity_Universidad.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_Entity_Universidad.edmx</DependentUpon>
+      <LastGenOutput>DB_Entity_Universidad.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

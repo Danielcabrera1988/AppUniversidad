@@ -13,10 +13,10 @@ namespace AppUniversidad.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DB_Entity_Universidad : DbContext
+    public partial class DB_Universidad : DbContext
     {
-        public DB_Entity_Universidad()
-            : base("name=DB_Entity_Universidad")
+        public DB_Universidad()
+            : base("name=DB_Universidad")
         {
         }
     
@@ -25,6 +25,7 @@ namespace AppUniversidad.Model
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Table_Adm> Table_Adm { get; set; }
         public virtual DbSet<Table_Alumno_DB> Table_Alumno_DB { get; set; }
         public virtual DbSet<Table_Profesor_DB> Table_Profesor_DB { get; set; }
     }

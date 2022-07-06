@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,13 +43,17 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAutoPswd = new System.Windows.Forms.Button();
-            this.txtBoxName = new System.Windows.Forms.TextBox();
-            this.txtBoxApellido = new System.Windows.Forms.TextBox();
-            this.txtBoxEmail = new System.Windows.Forms.TextBox();
-            this.txtBoxNewUser = new System.Windows.Forms.TextBox();
-            this.txtBoxPswd1 = new System.Windows.Forms.TextBox();
             this.txtBoxPswd2 = new System.Windows.Forms.TextBox();
+            this.apellidoTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.pswdTextBox = new System.Windows.Forms.TextBox();
+            this.usuarioTextBox = new System.Windows.Forms.TextBox();
+            this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.table_Profesor_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -160,7 +165,7 @@
             this.RBtnAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.RBtnAlumno.Name = "RBtnAlumno";
             this.RBtnAlumno.Size = new System.Drawing.Size(71, 21);
-            this.RBtnAlumno.TabIndex = 10;
+            this.RBtnAlumno.TabIndex = 8;
             this.RBtnAlumno.TabStop = true;
             this.RBtnAlumno.Text = "Alumno";
             this.RBtnAlumno.UseVisualStyleBackColor = true;
@@ -173,31 +178,33 @@
             this.RBtnProfesor.Margin = new System.Windows.Forms.Padding(4);
             this.RBtnProfesor.Name = "RBtnProfesor";
             this.RBtnProfesor.Size = new System.Drawing.Size(74, 21);
-            this.RBtnProfesor.TabIndex = 11;
+            this.RBtnProfesor.TabIndex = 9;
             this.RBtnProfesor.TabStop = true;
             this.RBtnProfesor.Text = "Profesor";
             this.RBtnProfesor.UseVisualStyleBackColor = true;
             // 
             // btnAceptar
             // 
+            this.btnAceptar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Location = new System.Drawing.Point(284, 198);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(88, 30);
-            this.btnAceptar.TabIndex = 12;
+            this.btnAceptar.TabIndex = 10;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
+            this.btnCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(284, 251);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(88, 30);
-            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
@@ -208,51 +215,10 @@
             this.btnAutoPswd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAutoPswd.Name = "btnAutoPswd";
             this.btnAutoPswd.Size = new System.Drawing.Size(88, 30);
-            this.btnAutoPswd.TabIndex = 14;
+            this.btnAutoPswd.TabIndex = 6;
             this.btnAutoPswd.Text = "Auto Pswd";
             this.btnAutoPswd.UseVisualStyleBackColor = true;
             this.btnAutoPswd.Click += new System.EventHandler(this.btnAutoPswd_Click);
-            // 
-            // txtBoxName
-            // 
-            this.txtBoxName.Location = new System.Drawing.Point(224, 34);
-            this.txtBoxName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBoxName.Name = "txtBoxName";
-            this.txtBoxName.Size = new System.Drawing.Size(150, 22);
-            this.txtBoxName.TabIndex = 15;
-            // 
-            // txtBoxApellido
-            // 
-            this.txtBoxApellido.Location = new System.Drawing.Point(224, 82);
-            this.txtBoxApellido.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBoxApellido.Name = "txtBoxApellido";
-            this.txtBoxApellido.Size = new System.Drawing.Size(150, 22);
-            this.txtBoxApellido.TabIndex = 16;
-            // 
-            // txtBoxEmail
-            // 
-            this.txtBoxEmail.Location = new System.Drawing.Point(224, 132);
-            this.txtBoxEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(150, 22);
-            this.txtBoxEmail.TabIndex = 17;
-            // 
-            // txtBoxNewUser
-            // 
-            this.txtBoxNewUser.Location = new System.Drawing.Point(111, 202);
-            this.txtBoxNewUser.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBoxNewUser.Name = "txtBoxNewUser";
-            this.txtBoxNewUser.Size = new System.Drawing.Size(150, 22);
-            this.txtBoxNewUser.TabIndex = 18;
-            // 
-            // txtBoxPswd1
-            // 
-            this.txtBoxPswd1.Location = new System.Drawing.Point(113, 255);
-            this.txtBoxPswd1.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBoxPswd1.Name = "txtBoxPswd1";
-            this.txtBoxPswd1.Size = new System.Drawing.Size(150, 22);
-            this.txtBoxPswd1.TabIndex = 19;
-            this.txtBoxPswd1.TextChanged += new System.EventHandler(this.txtBoxPswd1_TextChanged);
             // 
             // txtBoxPswd2
             // 
@@ -260,21 +226,72 @@
             this.txtBoxPswd2.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxPswd2.Name = "txtBoxPswd2";
             this.txtBoxPswd2.Size = new System.Drawing.Size(150, 22);
-            this.txtBoxPswd2.TabIndex = 20;
+            this.txtBoxPswd2.TabIndex = 7;
             this.txtBoxPswd2.TextChanged += new System.EventHandler(this.txtBoxPswd2_TextChanged);
+            // 
+            // apellidoTextBox
+            // 
+            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Apellido", true));
+            this.apellidoTextBox.Location = new System.Drawing.Point(235, 84);
+            this.apellidoTextBox.Name = "apellidoTextBox";
+            this.apellidoTextBox.Size = new System.Drawing.Size(200, 22);
+            this.apellidoTextBox.TabIndex = 2;
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "email", true));
+            this.emailTextBox.Location = new System.Drawing.Point(235, 134);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(200, 22);
+            this.emailTextBox.TabIndex = 3;
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(235, 31);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(200, 22);
+            this.nombreTextBox.TabIndex = 1;
+            // 
+            // pswdTextBox
+            // 
+            this.pswdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Pswd", true));
+            this.pswdTextBox.Location = new System.Drawing.Point(113, 257);
+            this.pswdTextBox.Name = "pswdTextBox";
+            this.pswdTextBox.Size = new System.Drawing.Size(148, 22);
+            this.pswdTextBox.TabIndex = 5;
+            this.pswdTextBox.TextChanged += new System.EventHandler(this.pswdTextBox_TextChanged);
+            // 
+            // usuarioTextBox
+            // 
+            this.usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Usuario", true));
+            this.usuarioTextBox.Location = new System.Drawing.Point(113, 200);
+            this.usuarioTextBox.Name = "usuarioTextBox";
+            this.usuarioTextBox.Size = new System.Drawing.Size(148, 22);
+            this.usuarioTextBox.TabIndex = 4;
+            // 
+            // table_Alumno_DBBindingSource
+            // 
+            this.table_Alumno_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Alumno_DB);
+            // 
+            // table_Profesor_DBBindingSource
+            // 
+            this.table_Profesor_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Profesor_DB);
             // 
             // UsuarioNuevo
             // 
+            this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(395, 374);
+            this.CancelButton = this.btnCancelar;
+            this.ClientSize = new System.Drawing.Size(444, 380);
+            this.Controls.Add(this.apellidoTextBox);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.nombreTextBox);
+            this.Controls.Add(this.pswdTextBox);
+            this.Controls.Add(this.usuarioTextBox);
             this.Controls.Add(this.txtBoxPswd2);
-            this.Controls.Add(this.txtBoxPswd1);
-            this.Controls.Add(this.txtBoxNewUser);
-            this.Controls.Add(this.txtBoxEmail);
-            this.Controls.Add(this.txtBoxApellido);
-            this.Controls.Add(this.txtBoxName);
             this.Controls.Add(this.btnAutoPswd);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
@@ -292,8 +309,12 @@
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UsuarioNuevo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Creacion de Usuario";
+            this.Load += new System.EventHandler(this.UsuarioNuevo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -315,11 +336,13 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAutoPswd;
-        private System.Windows.Forms.TextBox txtBoxName;
-        private System.Windows.Forms.TextBox txtBoxApellido;
-        private System.Windows.Forms.TextBox txtBoxEmail;
-        private System.Windows.Forms.TextBox txtBoxNewUser;
-        private System.Windows.Forms.TextBox txtBoxPswd1;
         private System.Windows.Forms.TextBox txtBoxPswd2;
+        private System.Windows.Forms.BindingSource table_Alumno_DBBindingSource;
+        private System.Windows.Forms.BindingSource table_Profesor_DBBindingSource;
+        private System.Windows.Forms.TextBox apellidoTextBox;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox nombreTextBox;
+        private System.Windows.Forms.TextBox pswdTextBox;
+        private System.Windows.Forms.TextBox usuarioTextBox;
     }
 }

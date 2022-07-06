@@ -20,8 +20,8 @@ namespace AppUniversidad.Model
         public string Usuario { get; set; }
         public string Pswd { get; set; }
         public string email { get; set; }
-        public Nullable<System.DateTime> FechaNacimiento { get; set; }
-        public string Direccion { get; set; }
         public string Telefono { get; set; }
+        public string Direccion { get; set; }
+        public Nullable<System.DateTime> Fecha_de_Nacimiento { get; set; }
     }
 }

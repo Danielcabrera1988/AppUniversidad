@@ -55,10 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Alumno.cs" />
-    <Compile Include="Class\Materia.cs" />
-    <Compile Include="Class\Profesor.cs" />
-    <Compile Include="Class\UserAdm.cs" />
+    <Compile Include="Connection\Connection_DB.cs" />
     <Compile Include="Forms\InscripcionCarrera.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,26 +92,29 @@
     <Compile Include="Forms\UsuarioNuevo.Designer.cs">
       <DependentUpon>UsuarioNuevo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\DB_Entity_Universidad.Context.cs">
+    <Compile Include="Model\DB_Universidad.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DB_Entity_Universidad.Context.tt</DependentUpon>
+      <DependentUpon>DB_Universidad.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\DB_Entity_Universidad.cs">
+    <Compile Include="Model\DB_Universidad.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DB_Entity_Universidad.tt</DependentUpon>
+      <DependentUpon>DB_Universidad.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\DB_Entity_Universidad.Designer.cs">
+    <Compile Include="Model\DB_Universidad.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DB_Entity_Universidad.edmx</DependentUpon>
+      <DependentUpon>DB_Universidad.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Table_Adm.cs">
+      <DependentUpon>DB_Universidad.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Table_Alumno_DB.cs">
-      <DependentUpon>DB_Entity_Universidad.tt</DependentUpon>
+      <DependentUpon>DB_Universidad.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Table_Profesor_DB.cs">
-      <DependentUpon>DB_Entity_Universidad.tt</DependentUpon>
+      <DependentUpon>DB_Universidad.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,6 +130,9 @@
     <EmbeddedResource Include="Forms\MenuProfesor.resx">
       <DependentUpon>MenuProfesor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuUserAdm.resx">
+      <DependentUpon>MenuUserAdm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UsuarioNuevo.resx">
       <DependentUpon>UsuarioNuevo.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,15 +146,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="Model\DB_Entity_Universidad.edmx">
+    <EntityDeploy Include="Model\DB_Universidad.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DB_Entity_Universidad.Designer.cs</LastGenOutput>
+      <LastGenOutput>DB_Universidad.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model\DB_Entity_Universidad.edmx.diagram">
-      <DependentUpon>DB_Entity_Universidad.edmx</DependentUpon>
+    <None Include="Model\DB_Universidad.edmx.diagram">
+      <DependentUpon>DB_Universidad.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\AppUniversidad.Model.DB_Entity_Universidad.datasource" />
+    <None Include="Properties\DataSources\AppUniversidad.Model.DB_Universidad.datasource" />
+    <None Include="Properties\DataSources\AppUniversidad.Model.Table_Adm.datasource" />
     <None Include="Properties\DataSources\AppUniversidad.Model.Table_Alumno_DB.datasource" />
     <None Include="Properties\DataSources\AppUniversidad.Model.Table_Profesor_DB.datasource" />
     <None Include="Properties\Settings.settings">
@@ -167,7 +171,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\1.jpg" />
   </ItemGroup>
@@ -202,19 +205,20 @@
     <None Include="Resources\monkey-nft-design-template-7193ee0afdf49d346d58217b2f9cdcc2_screen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\DB_Entity_Universidad.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DB_Entity_Universidad.Context.cs</LastGenOutput>
-      <DependentUpon>DB_Entity_Universidad.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model\DB_Entity_Universidad.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DB_Entity_Universidad.edmx</DependentUpon>
-      <LastGenOutput>DB_Entity_Universidad.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model\DB_Universidad.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_Universidad.edmx</DependentUpon>
+      <LastGenOutput>DB_Universidad.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\DB_Universidad.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DB_Universidad.edmx</DependentUpon>
+      <LastGenOutput>DB_Universidad.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

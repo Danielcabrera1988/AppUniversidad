@@ -5,6 +5,19 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="DB_Entity_UniversidadModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Table_Adm">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Apellido" Type="varchar" MaxLength="50" />
+          <Property Name="Usuario" Type="varchar" MaxLength="50" />
+          <Property Name="Pswd" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="Telefono" Type="varchar" MaxLength="50" />
+          <Property Name="Direccion" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Table_Alumno_DB">
           <Key>
             <PropertyRef Name="ID" />
@@ -15,25 +28,26 @@
           <Property Name="Usuario" Type="varchar" MaxLength="50" />
           <Property Name="Pswd" Type="varchar" MaxLength="50" />
           <Property Name="email" Type="varchar" MaxLength="50" />
-          <Property Name="FechaNacimiento" Type="datetime" />
-          <Property Name="Direccion" Type="varchar" MaxLength="50" />
           <Property Name="Telefono" Type="varchar" MaxLength="50" />
+          <Property Name="Direccion" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha de Nacimiento" Type="datetime" />
         </EntityType>
         <EntityType Name="Table_Profesor_DB">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="50" />
           <Property Name="Apellido" Type="varchar" MaxLength="50" />
           <Property Name="Usuario" Type="varchar" MaxLength="50" />
           <Property Name="Pswd" Type="varchar" MaxLength="50" />
           <Property Name="email" Type="varchar" MaxLength="50" />
-          <Property Name="FechaNacimiento" Type="datetime" />
           <Property Name="Telefono" Type="varchar" MaxLength="50" />
           <Property Name="Direccion" Type="varchar" MaxLength="50" />
+          <Property Name="FechaNacimiento" Type="datetime" />
         </EntityType>
         <EntityContainer Name="DB_Entity_UniversidadModelStoreContainer">
+          <EntitySet Name="Table_Adm" EntityType="Self.Table_Adm" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_Alumno_DB" EntityType="Self.Table_Alumno_DB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_Profesor_DB" EntityType="Self.Table_Profesor_DB" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -42,6 +56,19 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_Entity_UniversidadModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Table_Adm">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pswd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="Table_Alumno_DB">
           <Key>
             <PropertyRef Name="ID" />
@@ -52,25 +79,26 @@
           <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Pswd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="FechaNacimiento" Type="DateTime" Precision="3" />
-          <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_de_Nacimiento" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Table_Profesor_DB">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Pswd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="FechaNacimiento" Type="DateTime" Precision="3" />
           <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaNacimiento" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityContainer Name="DB_Entity_Universidad" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DB_Universidad" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Table_Adm" EntityType="Self.Table_Adm" />
           <EntitySet Name="Table_Alumno_DB" EntityType="Self.Table_Alumno_DB" />
           <EntitySet Name="Table_Profesor_DB" EntityType="Self.Table_Profesor_DB" />
         </EntityContainer>
@@ -79,7 +107,21 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DB_Entity_UniversidadModelStoreContainer" CdmEntityContainer="DB_Entity_Universidad">
+        <EntityContainerMapping StorageEntityContainer="DB_Entity_UniversidadModelStoreContainer" CdmEntityContainer="DB_Universidad">
+          <EntitySetMapping Name="Table_Adm">
+            <EntityTypeMapping TypeName="DB_Entity_UniversidadModel.Table_Adm">
+              <MappingFragment StoreEntitySet="Table_Adm">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellido" ColumnName="Apellido" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Pswd" ColumnName="Pswd" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Table_Alumno_DB">
             <EntityTypeMapping TypeName="DB_Entity_UniversidadModel.Table_Alumno_DB">
               <MappingFragment StoreEntitySet="Table_Alumno_DB">
@@ -89,9 +131,9 @@
                 <ScalarProperty Name="Usuario" ColumnName="Usuario" />
                 <ScalarProperty Name="Pswd" ColumnName="Pswd" />
                 <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
-                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Fecha_de_Nacimiento" ColumnName="Fecha de Nacimiento" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -104,9 +146,9 @@
                 <ScalarProperty Name="Usuario" ColumnName="Usuario" />
                 <ScalarProperty Name="Pswd" ColumnName="Pswd" />
                 <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
                 <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

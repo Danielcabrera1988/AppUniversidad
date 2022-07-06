@@ -1,4 +1,5 @@
 ﻿using AppUniversidad.Forms;
+using AppUniversidad.Model;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -7,6 +8,7 @@ namespace AppUniversidad
 {
     public partial class Login : Form
     {
+        public DB_Universidad dc = new DB_Universidad();
         public Login()
         {
             InitializeComponent();
@@ -52,7 +54,16 @@ namespace AppUniversidad
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             UsuarioNuevo nuevo = new UsuarioNuevo();
-            nuevo.Show();
+            nuevo.dc = this.dc;
+            nuevo.ShowDialog();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            //realizar la conexion a la base de datos y comprobar si el usario existe
+            // y si las credenciales son correctas
+            MenuUserAdm adm = new MenuUserAdm();
+            adm.ShowDialog();
         }
     }
 }

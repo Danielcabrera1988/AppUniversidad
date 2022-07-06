@@ -12,7 +12,7 @@ namespace AppUniversidad.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Table_Profesor_DB
+    public partial class Table_Adm
     {
         public int ID { get; set; }
         public string Nombre { get; set; }
@@ -22,6 +22,5 @@ namespace AppUniversidad.Model
         public string email { get; set; }
         public string Telefono { get; set; }
         public string Direccion { get; set; }
-        public Nullable<System.DateTime> FechaNacimiento { get; set; }
     }
 }

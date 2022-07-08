@@ -194,7 +194,7 @@
             this.btnAceptar.TabIndex = 10;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            this.btnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -255,7 +255,6 @@
             // 
             // pswdTextBox
             // 
-            this.pswdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Pswd", true));
             this.pswdTextBox.Location = new System.Drawing.Point(113, 257);
             this.pswdTextBox.Name = "pswdTextBox";
             this.pswdTextBox.Size = new System.Drawing.Size(148, 22);

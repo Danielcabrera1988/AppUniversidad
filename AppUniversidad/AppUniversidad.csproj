@@ -55,7 +55,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connection\Connection_DB.cs" />
+    <Compile Include="Class\Alumno.cs" />
+    <Compile Include="Class\Materias.cs" />
+    <Compile Include="Class\Profesor.cs" />
+    <Compile Include="Forms\Buscador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Buscador.Designer.cs">
+      <DependentUpon>Buscador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InscripcionCarrera.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +94,12 @@
     <Compile Include="Forms\MenuUserAdm.Designer.cs">
       <DependentUpon>MenuUserAdm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ModificarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ModificarAlumno.Designer.cs">
+      <DependentUpon>ModificarAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UsuarioNuevo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,10 +121,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_Universidad.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\sysdiagrams.cs">
+      <DependentUpon>DB_Universidad.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Table_Adm.cs">
       <DependentUpon>DB_Universidad.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Table_Alumno_DB.cs">
+      <DependentUpon>DB_Universidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Table_Materias_DB.cs">
+      <DependentUpon>DB_Universidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Table_Materia__Alumno.cs">
+      <DependentUpon>DB_Universidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Table_Profesor_Alumno.cs">
       <DependentUpon>DB_Universidad.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Table_Profesor_DB.cs">
@@ -118,6 +144,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Buscador.resx">
+      <DependentUpon>Buscador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\InscripcionCarrera.resx">
       <DependentUpon>InscripcionCarrera.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuUserAdm.resx">
       <DependentUpon>MenuUserAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ModificarAlumno.resx">
+      <DependentUpon>ModificarAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UsuarioNuevo.resx">
       <DependentUpon>UsuarioNuevo.cs</DependentUpon>
@@ -155,8 +187,12 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\AppUniversidad.Model.DB_Universidad.datasource" />
+    <None Include="Properties\DataSources\AppUniversidad.Model.sysdiagrams.datasource" />
     <None Include="Properties\DataSources\AppUniversidad.Model.Table_Adm.datasource" />
     <None Include="Properties\DataSources\AppUniversidad.Model.Table_Alumno_DB.datasource" />
+    <None Include="Properties\DataSources\AppUniversidad.Model.Table_Materias_DB.datasource" />
+    <None Include="Properties\DataSources\AppUniversidad.Model.Table_Materia__Alumno.datasource" />
+    <None Include="Properties\DataSources\AppUniversidad.Model.Table_Profesor_Alumno.datasource" />
     <None Include="Properties\DataSources\AppUniversidad.Model.Table_Profesor_DB.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

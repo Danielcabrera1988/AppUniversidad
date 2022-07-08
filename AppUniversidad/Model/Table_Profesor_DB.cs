@@ -14,6 +14,12 @@ namespace AppUniversidad.Model
     
     public partial class Table_Profesor_DB
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Table_Profesor_DB()
+        {
+            this.Table_Profesor_Alumno = new HashSet<Table_Profesor_Alumno>();
+        }
+    
         public int ID { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
@@ -23,5 +29,10 @@ namespace AppUniversidad.Model
         public string Telefono { get; set; }
         public string Direccion { get; set; }
         public Nullable<System.DateTime> FechaNacimiento { get; set; }
+        public Nullable<int> id_Alumno { get; set; }
+        public string id_Materia { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Table_Profesor_Alumno> Table_Profesor_Alumno { get; set; }
     }
 }

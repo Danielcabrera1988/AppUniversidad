@@ -25,8 +25,12 @@ namespace AppUniversidad.Model
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Table_Adm> Table_Adm { get; set; }
         public virtual DbSet<Table_Alumno_DB> Table_Alumno_DB { get; set; }
+        public virtual DbSet<Table_Materia__Alumno> Table_Materia__Alumno { get; set; }
+        public virtual DbSet<Table_Materias_DB> Table_Materias_DB { get; set; }
+        public virtual DbSet<Table_Profesor_Alumno> Table_Profesor_Alumno { get; set; }
         public virtual DbSet<Table_Profesor_DB> Table_Profesor_DB { get; set; }
     }
 }

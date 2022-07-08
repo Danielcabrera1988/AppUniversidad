@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppUniversidad.Class;
+using AppUniversidad.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,18 @@ namespace AppUniversidad.Forms
         public MenuProfesor()
         {
             InitializeComponent();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Buscador buscador = new Buscador();
+            buscador.Show();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            ModificarAlumno modificar = new ModificarAlumno();
+            modificar.Show();
         }
     }
 }

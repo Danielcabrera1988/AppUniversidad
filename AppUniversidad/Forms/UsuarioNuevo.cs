@@ -1,7 +1,8 @@
 ﻿using AppUniversidad.Model;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace AppUniversidad.Forms
 {
@@ -10,11 +11,12 @@ namespace AppUniversidad.Forms
         public DB_Universidad dc { get; set; }
         private Table_Alumno_DB AlumnoFicha { get; set; }
         private Table_Profesor_DB ProfesorFicha { get; set; }
+        
         public UsuarioNuevo()
         {
             InitializeComponent();
-        }        
-        private void btnAceptar_Click(object sender, EventArgs e)
+        }
+        private void BtnAceptar_Click(object sender, EventArgs e)
         {
             if ((nombreTextBox.Text != "" && apellidoTextBox.Text != "" && usuarioTextBox.Text != "" && pswdTextBox.Text != "" && txtBoxPswd2.Text != "" && emailTextBox.Text != "" && RBtnAlumno.Checked)
                 || (nombreTextBox.Text != "" && apellidoTextBox.Text != "" && apellidoTextBox.Text != "" && pswdTextBox.Text != "" && txtBoxPswd2.Text != "" && emailTextBox.Text != "" && RBtnProfesor.Checked))
@@ -23,8 +25,9 @@ namespace AppUniversidad.Forms
                 {
                     if (verificarPswd())
                     {
+                        pswdTextBox.Text = GetSHA256(txtBoxPswd2.Text);
                         dc.Table_Alumno_DB.Add(AlumnoFicha);
-                        dc.SaveChanges();                            
+                        dc.SaveChanges();
                         MessageBox.Show("Alumno creado con éxito", "Creación de Alumno");
                         this.Close();
                     }
@@ -42,7 +45,7 @@ namespace AppUniversidad.Forms
                         dc.Table_Profesor_DB.Add(ProfesorFicha);
                         dc.SaveChanges();
                         MessageBox.Show("Profesor creado con éxito", "Creación de Profesor");
-                        this.Close();
+                        this.Close();                        
                     }
                     else
                     {
@@ -50,12 +53,12 @@ namespace AppUniversidad.Forms
                         pswdTextBox.Text = "";
                         txtBoxPswd2.Text = "";
                     }
-                }                
+                }
             }
             else
             {
-                lblMsgError.Text = "Error, Uno o mas campos incompletos";
                 lblMsgError.Visible = true;
+                lblMsgError.Text = "Error, Uno o mas campos incompletos";
             }
         }
         private void pswdTextBox_TextChanged(object sender, EventArgs e)
@@ -65,6 +68,17 @@ namespace AppUniversidad.Forms
         private void txtBoxPswd2_TextChanged(object sender, EventArgs e)
         {
             txtBoxPswd2.UseSystemPasswordChar = true;
+        }
+
+        public static string GetSHA256(string str)
+        {
+            SHA256 sha256 = SHA256Managed.Create();
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] stream = null;
+            StringBuilder sb = new StringBuilder();
+            stream = sha256.ComputeHash(encoding.GetBytes(str));
+            for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
+            return sb.ToString();
         }
         private void makePassword()
         {

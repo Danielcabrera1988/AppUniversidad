@@ -107,7 +107,8 @@ namespace AppUniversidad.Forms
             }
             txtBoxPswd2.Text = password;
             pswdTextBox.Text = password;
-            MessageBox.Show($"Contraseña generada << {password} >>\n ¡Guardela antes de cerrar el cuadro de dialogo!", "AUTOGEN PSWD");
+            MensajeAutoClave mensajebox = new MensajeAutoClave($"Contraseña generada:\r\n\r\n{password}\r\n\r\n¡Guardela antes de cerrar el cuadro de dialogo!");
+            mensajebox.ShowDialog();
         }
         private void btnAutoPswd_Click(object sender, EventArgs e)
         {
@@ -130,6 +131,11 @@ namespace AppUniversidad.Forms
                 table_Alumno_DBBindingSource.DataSource = AlumnoFicha;
                 table_Profesor_DBBindingSource.DataSource = ProfesorFicha;
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

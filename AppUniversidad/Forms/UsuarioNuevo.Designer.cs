@@ -45,11 +45,11 @@
             this.btnAutoPswd = new System.Windows.Forms.Button();
             this.txtBoxPswd2 = new System.Windows.Forms.TextBox();
             this.apellidoTextBox = new System.Windows.Forms.TextBox();
+            this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.pswdTextBox = new System.Windows.Forms.TextBox();
             this.usuarioTextBox = new System.Windows.Forms.TextBox();
-            this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.table_Profesor_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).BeginInit();
@@ -207,6 +207,7 @@
             this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAutoPswd
             // 
@@ -236,6 +237,10 @@
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(200, 22);
             this.apellidoTextBox.TabIndex = 2;
+            // 
+            // table_Alumno_DBBindingSource
+            // 
+            this.table_Alumno_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Alumno_DB);
             // 
             // emailTextBox
             // 
@@ -268,10 +273,6 @@
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(148, 22);
             this.usuarioTextBox.TabIndex = 4;
-            // 
-            // table_Alumno_DBBindingSource
-            // 
-            this.table_Alumno_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Alumno_DB);
             // 
             // table_Profesor_DBBindingSource
             // 

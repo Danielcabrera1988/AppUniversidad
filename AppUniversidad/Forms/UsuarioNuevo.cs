@@ -18,6 +18,7 @@ namespace AppUniversidad.Forms
         }
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
+            //corregir el databinging de alumno y profesor
             if ((nombreTextBox.Text != "" && apellidoTextBox.Text != "" && usuarioTextBox.Text != "" && pswdTextBox.Text != "" && txtBoxPswd2.Text != "" && emailTextBox.Text != "" && RBtnAlumno.Checked)
                 || (nombreTextBox.Text != "" && apellidoTextBox.Text != "" && apellidoTextBox.Text != "" && pswdTextBox.Text != "" && txtBoxPswd2.Text != "" && emailTextBox.Text != "" && RBtnProfesor.Checked))
             {

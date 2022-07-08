@@ -18,5 +18,12 @@ namespace AppUniversidad.Forms
             table_Alumno_DBBindingSource.DataSource = dc.Table_Alumno_DB.ToList();
             table_Profesor_DBBindingSource.DataSource = dc.Table_Profesor_DB.ToList();
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.Show();
+        }
     }
 }

@@ -4,6 +4,8 @@ using System;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace AppUniversidad
 {
@@ -67,7 +69,7 @@ namespace AppUniversidad
             //Consulta para los ADM
             SqlCommand cmadm = new SqlCommand("SELECT USUARIO, PSWD FROM Table_Adm WHERE Usuario = @vusuario AND Pswd = @vpswd",connection);
             cmadm.Parameters.AddWithValue("@vusuario",txtBoxUser.Text);
-            cmadm.Parameters.AddWithValue("@vpswd", txtBoxPass.Text);
+            cmadm.Parameters.AddWithValue("@vpswd", GetMD5(txtBoxPass.Text));
             SqlDataReader reader = cmadm.ExecuteReader();
             if (reader.Read())
             {
@@ -80,7 +82,7 @@ namespace AppUniversidad
             //Consulta para los Alumnos
             SqlCommand cmalumno = new SqlCommand("SELECT USUARIO, PSWD FROM Table_Alumno_DB WHERE Usuario = @vusuario AND Pswd = @vpswd", connection);
             cmalumno.Parameters.AddWithValue("@vusuario", txtBoxUser.Text);
-            cmalumno.Parameters.AddWithValue("@vpswd", txtBoxPass.Text);
+            cmalumno.Parameters.AddWithValue("@vpswd", GetMD5(txtBoxPass.Text));
             reader = cmalumno.ExecuteReader();
             if (reader.Read())
             {
@@ -93,7 +95,7 @@ namespace AppUniversidad
             //Consulta para los Profesores
             SqlCommand cmprofe = new SqlCommand("SELECT USUARIO, PSWD FROM Table_Profesor_DB WHERE Usuario = @vusuario AND Pswd = @vpswd", connection);
             cmprofe.Parameters.AddWithValue("@vusuario", txtBoxUser.Text);
-            cmprofe.Parameters.AddWithValue("@vpswd", txtBoxPass.Text);
+            cmprofe.Parameters.AddWithValue("@vpswd", GetMD5(txtBoxPass.Text));
             reader = cmprofe.ExecuteReader();
             if (reader.Read())
             {
@@ -105,6 +107,17 @@ namespace AppUniversidad
             else MessageBox.Show("Usuario o Contraseña invalidos", "DATOS INCORRECTOS");
             reader.Close();
             connection.Close();
+        }
+
+        public static string GetMD5(string str)
+        {
+            MD5 md5 = MD5CryptoServiceProvider.Create();
+            ASCIIEncoding encoding = new ASCIIEncoding();
+            byte[] stream = null;
+            StringBuilder sb = new StringBuilder();
+            stream = md5.ComputeHash(encoding.GetBytes(str));
+            for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
+            return sb.ToString();
         }
     }
 }

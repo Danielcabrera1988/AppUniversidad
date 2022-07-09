@@ -51,6 +51,7 @@
             this.table_Profesor_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.table_AdmBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.table_Materia__AlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -71,7 +72,7 @@
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(684, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(742, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -88,20 +89,20 @@
             // abrirToolStripMenuItem
             // 
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.abrirToolStripMenuItem.Text = "Abrir";
             // 
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.guardarToolStripMenuItem.Text = "Guardar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -142,8 +143,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.table_Alumno_DBDataGridView);
-            this.splitContainer1.Size = new System.Drawing.Size(684, 386);
-            this.splitContainer1.SplitterDistance = 140;
+            this.splitContainer1.Size = new System.Drawing.Size(742, 386);
+            this.splitContainer1.SplitterDistance = 151;
             this.splitContainer1.TabIndex = 1;
             // 
             // btnBuscar
@@ -185,12 +186,13 @@
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11});
+            this.dataGridViewTextBoxColumn11,
+            this.Materia});
             this.table_Alumno_DBDataGridView.DataSource = this.table_Alumno_DBBindingSource;
             this.table_Alumno_DBDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.table_Alumno_DBDataGridView.Location = new System.Drawing.Point(0, 0);
             this.table_Alumno_DBDataGridView.Name = "table_Alumno_DBDataGridView";
-            this.table_Alumno_DBDataGridView.Size = new System.Drawing.Size(540, 386);
+            this.table_Alumno_DBDataGridView.Size = new System.Drawing.Size(587, 386);
             this.table_Alumno_DBDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
@@ -239,12 +241,17 @@
             // 
             this.table_Materia__AlumnoBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materia__Alumno);
             // 
+            // Materia
+            // 
+            this.Materia.HeaderText = "Materia";
+            this.Materia.Name = "Materia";
+            // 
             // MenuProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(684, 410);
+            this.ClientSize = new System.Drawing.Size(742, 410);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -292,5 +299,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Materia;
     }
 }

@@ -44,9 +44,18 @@
             this.materiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.table_Materia__AlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgMateriasAlumnos = new System.Windows.Forms.DataGridView();
+            this.tableMateriaAlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Materias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Faltas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Materia__AlumnoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMateriasAlumnos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableMateriaAlumnoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -56,7 +65,7 @@
             this.verToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(742, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(543, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,31 +86,31 @@
             this.examenToolStripMenuItem,
             this.certificadoExamenToolStripMenuItem});
             this.altaToolStripMenuItem.Name = "altaToolStripMenuItem";
-            this.altaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.altaToolStripMenuItem.Text = "Alta / Baja";
             // 
             // examenToolStripMenuItem
             // 
             this.examenToolStripMenuItem.Name = "examenToolStripMenuItem";
-            this.examenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.examenToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.examenToolStripMenuItem.Text = "Examen";
             // 
             // certificadoExamenToolStripMenuItem
             // 
             this.certificadoExamenToolStripMenuItem.Name = "certificadoExamenToolStripMenuItem";
-            this.certificadoExamenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.certificadoExamenToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.certificadoExamenToolStripMenuItem.Text = "Certificado Examen";
             // 
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.bToolStripMenuItem.Text = "Dedudas";
             // 
             // faltasToolStripMenuItem
             // 
             this.faltasToolStripMenuItem.Name = "faltasToolStripMenuItem";
-            this.faltasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.faltasToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.faltasToolStripMenuItem.Text = "Faltas";
             this.faltasToolStripMenuItem.Click += new System.EventHandler(this.faltasToolStripMenuItem_Click);
             // 
@@ -112,7 +121,7 @@
             this.licenciaturasToolStripMenuItem,
             this.tecnicaturasToolStripMenuItem});
             this.inscripcionesToolStripMenuItem.Name = "inscripcionesToolStripMenuItem";
-            this.inscripcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inscripcionesToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.inscripcionesToolStripMenuItem.Text = "Inscripciones";
             // 
             // carrerasToolStripMenuItem
@@ -155,11 +164,56 @@
             // 
             this.table_Materia__AlumnoBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materia__Alumno);
             // 
+            // dgMateriasAlumnos
+            // 
+            this.dgMateriasAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgMateriasAlumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Materias,
+            this.Alumno,
+            this.Nota,
+            this.Faltas,
+            this.Profesor});
+            this.dgMateriasAlumnos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgMateriasAlumnos.Location = new System.Drawing.Point(0, 24);
+            this.dgMateriasAlumnos.Name = "dgMateriasAlumnos";
+            this.dgMateriasAlumnos.Size = new System.Drawing.Size(543, 327);
+            this.dgMateriasAlumnos.TabIndex = 3;
+            // 
+            // tableMateriaAlumnoBindingSource
+            // 
+            this.tableMateriaAlumnoBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materia__Alumno);
+            // 
+            // Materias
+            // 
+            this.Materias.HeaderText = "Materias";
+            this.Materias.Name = "Materias";
+            // 
+            // Alumno
+            // 
+            this.Alumno.HeaderText = "Alumno";
+            this.Alumno.Name = "Alumno";
+            // 
+            // Nota
+            // 
+            this.Nota.HeaderText = "Nota";
+            this.Nota.Name = "Nota";
+            // 
+            // Faltas
+            // 
+            this.Faltas.HeaderText = "Faltas";
+            this.Faltas.Name = "Faltas";
+            // 
+            // Profesor
+            // 
+            this.Profesor.HeaderText = "Profesor";
+            this.Profesor.Name = "Profesor";
+            // 
             // MenuAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 322);
+            this.ClientSize = new System.Drawing.Size(543, 351);
+            this.Controls.Add(this.dgMateriasAlumnos);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuAlumnos";
@@ -168,6 +222,8 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Materia__AlumnoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMateriasAlumnos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableMateriaAlumnoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +245,12 @@
         private System.Windows.Forms.ToolStripMenuItem tecnicaturasToolStripMenuItem;
         private System.Windows.Forms.BindingSource table_Alumno_DBBindingSource;
         private System.Windows.Forms.BindingSource table_Materia__AlumnoBindingSource;
+        private System.Windows.Forms.DataGridView dgMateriasAlumnos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Materias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Alumno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nota;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Faltas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Profesor;
+        private System.Windows.Forms.BindingSource tableMateriaAlumnoBindingSource;
     }
 }

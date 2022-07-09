@@ -17,6 +17,8 @@ namespace AppUniversidad.Model
         public int ID { get; set; }
         public Nullable<int> id_Materias { get; set; }
         public Nullable<int> id_Alumnos { get; set; }
+        public string Nombre_Materia { get; set; }
+        public string Nombre_Alumno { get; set; }
     
         public virtual Table_Alumno_DB Table_Alumno_DB { get; set; }
         public virtual Table_Materias_DB Table_Materias_DB { get; set; }

@@ -36,8 +36,8 @@
           <Property Name="Nombre" Type="varchar" MaxLength="50" />
           <Property Name="Apellido" Type="varchar" MaxLength="50" />
           <Property Name="Usuario" Type="varchar" MaxLength="50" />
-          <Property Name="Pswd" Type="varchar" MaxLength="50" />
-          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="Pswd" Type="varchar" MaxLength="100" />
+          <Property Name="email" Type="varchar" MaxLength="100" />
           <Property Name="Telefono" Type="varchar" MaxLength="50" />
           <Property Name="Direccion" Type="varchar" MaxLength="50" />
           <Property Name="FechaNacimiento" Type="datetime" />
@@ -53,6 +53,8 @@
           <Property Name="ID" Type="int" Nullable="false" />
           <Property Name="id_Materias" Type="int" />
           <Property Name="id_Alumnos" Type="int" />
+          <Property Name="Nombre_Materia" Type="varchar" MaxLength="50" />
+          <Property Name="Nombre_Alumno" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="Table_Materias_DB">
           <Key>
@@ -70,6 +72,8 @@
           <Property Name="ID" Type="int" Nullable="false" />
           <Property Name="id_Alumno" Type="int" />
           <Property Name="id_Profesor" Type="int" />
+          <Property Name="Nombre_Profesor" Type="varchar" MaxLength="50" />
+          <Property Name="Nombre_Alumno" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Table_Profesor_DB">
           <Key>
@@ -220,8 +224,8 @@
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Usuario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Pswd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pswd" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="FechaNacimiento" Type="DateTime" Precision="3" />
@@ -241,6 +245,8 @@
           <Property Name="id_Alumnos" Type="Int32" />
           <NavigationProperty Name="Table_Alumno_DB" Relationship="DB_Entity_UniversidadModel.FK_Table__Alumno_Materia" FromRole="Table_Materia__Alumno" ToRole="Table_Alumno_DB" />
           <NavigationProperty Name="Table_Materias_DB" Relationship="DB_Entity_UniversidadModel.FK_Table_Materia__Alumno" FromRole="Table_Materia__Alumno" ToRole="Table_Materias_DB" />
+          <Property Name="Nombre_Materia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre_Alumno" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
         <EntityType Name="Table_Materias_DB">
           <Key>
@@ -261,6 +267,8 @@
           <Property Name="id_Profesor" Type="Int32" />
           <NavigationProperty Name="Table_Alumno_DB" Relationship="DB_Entity_UniversidadModel.FK_Table_Profesor_Alumno_Table_Alumno_DB" FromRole="Table_Profesor_Alumno" ToRole="Table_Alumno_DB" />
           <NavigationProperty Name="Table_Profesor_DB" Relationship="DB_Entity_UniversidadModel.FK_Table_Profesor_Alumno_Table_Profesor_DB" FromRole="Table_Profesor_Alumno" ToRole="Table_Profesor_DB" />
+          <Property Name="Nombre_Profesor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre_Alumno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Table_Profesor_DB">
           <Key>
@@ -380,6 +388,8 @@
           <EntitySetMapping Name="Table_Materia__Alumno">
             <EntityTypeMapping TypeName="DB_Entity_UniversidadModel.Table_Materia__Alumno">
               <MappingFragment StoreEntitySet="Table_Materia__Alumno">
+                <ScalarProperty Name="Nombre_Alumno" ColumnName="Nombre_Alumno" />
+                <ScalarProperty Name="Nombre_Materia" ColumnName="Nombre_Materia" />
                 <ScalarProperty Name="id_Alumnos" ColumnName="id_Alumnos" />
                 <ScalarProperty Name="id_Materias" ColumnName="id_Materias" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -399,6 +409,8 @@
           <EntitySetMapping Name="Table_Profesor_Alumno">
             <EntityTypeMapping TypeName="DB_Entity_UniversidadModel.Table_Profesor_Alumno">
               <MappingFragment StoreEntitySet="Table_Profesor_Alumno">
+                <ScalarProperty Name="Nombre_Alumno" ColumnName="Nombre_Alumno" />
+                <ScalarProperty Name="Nombre_Profesor" ColumnName="Nombre_Profesor" />
                 <ScalarProperty Name="id_Profesor" ColumnName="id_Profesor" />
                 <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
                 <ScalarProperty Name="ID" ColumnName="ID" />

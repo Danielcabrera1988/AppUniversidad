@@ -39,5 +39,10 @@ namespace AppUniversidad.Forms
                 }
             }
         }
+
+        private void faltasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //cread grid de materias con relacion de faltas
+        }
     }
 }

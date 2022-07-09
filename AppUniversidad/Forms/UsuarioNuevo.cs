@@ -16,6 +16,7 @@ namespace AppUniversidad.Forms
         {
             InitializeComponent();
         }
+        //creacion del alumno o profesor
         private void BtnAceptar_Click(object sender, EventArgs e)
         {
             //corregir el databinging de alumno y profesor
@@ -26,7 +27,11 @@ namespace AppUniversidad.Forms
                 {
                     if (verificarPswd())
                     {
-                        pswdTextBox.Text = GetSHA256(txtBoxPswd2.Text);
+                        AlumnoFicha.Apellido = apellidoTextBox.Text;
+                        AlumnoFicha.Nombre = nombreTextBox.Text;
+                        AlumnoFicha.email = emailTextBox.Text;
+                        AlumnoFicha.Usuario = usuarioTextBox.Text;
+                        AlumnoFicha.Pswd = GetMD5(pswdTextBox.Text);
                         dc.Table_Alumno_DB.Add(AlumnoFicha);
                         dc.SaveChanges();
                         MessageBox.Show("Alumno creado con éxito", "Creación de Alumno");
@@ -43,6 +48,11 @@ namespace AppUniversidad.Forms
                 {
                     if (verificarPswd())
                     {
+                        ProfesorFicha.Apellido = usuarioTextBox.Text;
+                        ProfesorFicha.Nombre = nombreTextBox.Text;
+                        ProfesorFicha.email = emailTextBox.Text;
+                        ProfesorFicha.Usuario = usuarioTextBox.Text;
+                        ProfesorFicha.Pswd = GetMD5(pswdTextBox.Text);
                         dc.Table_Profesor_DB.Add(ProfesorFicha);
                         dc.SaveChanges();
                         MessageBox.Show("Profesor creado con éxito", "Creación de Profesor");
@@ -62,22 +72,14 @@ namespace AppUniversidad.Forms
                 lblMsgError.Text = "Error, Uno o mas campos incompletos";
             }
         }
-        private void pswdTextBox_TextChanged(object sender, EventArgs e)
+       
+        public static string GetMD5(string str)
         {
-            pswdTextBox.UseSystemPasswordChar = true;
-        }
-        private void txtBoxPswd2_TextChanged(object sender, EventArgs e)
-        {
-            txtBoxPswd2.UseSystemPasswordChar = true;
-        }
-
-        public static string GetSHA256(string str)
-        {
-            SHA256 sha256 = SHA256Managed.Create();
+            MD5 md5 = MD5CryptoServiceProvider.Create();
             ASCIIEncoding encoding = new ASCIIEncoding();
             byte[] stream = null;
             StringBuilder sb = new StringBuilder();
-            stream = sha256.ComputeHash(encoding.GetBytes(str));
+            stream = md5.ComputeHash(encoding.GetBytes(str));
             for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
             return sb.ToString();
         }

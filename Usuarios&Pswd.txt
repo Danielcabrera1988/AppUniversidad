@@ -1,0 +1,4 @@
+usuarios		contraseñas
+admin			admin
+alexxx		12345asdfg	
+theking		12345asdfg

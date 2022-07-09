@@ -76,6 +76,8 @@ namespace AppUniversidad
                 MenuUserAdm menuAdm = new MenuUserAdm();
                 menuAdm.Show();
                 connection.Close();
+                txtBoxUser.Text = "";
+                txtBoxPass.Text = "";
                 return;
             }
             reader.Close();
@@ -89,6 +91,8 @@ namespace AppUniversidad
                 MenuAlumnos menuAlumnos = new MenuAlumnos();
                 menuAlumnos.Show();
                 connection.Close();
+                txtBoxUser.Text = "";
+                txtBoxPass.Text = "";
                 return;
             }
             reader.Close();
@@ -102,11 +106,15 @@ namespace AppUniversidad
                 MenuProfesor menuProfesor = new MenuProfesor();
                 menuProfesor.Show();
                 connection.Close();
+                txtBoxUser.Text = "";
+                txtBoxPass.Text = "";
                 return;
             }
             else MessageBox.Show("Usuario o Contraseña invalidos", "DATOS INCORRECTOS");
             reader.Close();
             connection.Close();
+            txtBoxUser.Text = "";
+            txtBoxPass.Text = "";
         }
 
         public static string GetMD5(string str)

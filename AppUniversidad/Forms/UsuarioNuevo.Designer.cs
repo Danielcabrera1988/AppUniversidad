@@ -45,11 +45,11 @@
             this.btnAutoPswd = new System.Windows.Forms.Button();
             this.txtBoxPswd2 = new System.Windows.Forms.TextBox();
             this.apellidoTextBox = new System.Windows.Forms.TextBox();
-            this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.pswdTextBox = new System.Windows.Forms.TextBox();
             this.usuarioTextBox = new System.Windows.Forms.TextBox();
+            this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.table_Profesor_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).BeginInit();
@@ -226,25 +226,19 @@
             this.txtBoxPswd2.Location = new System.Drawing.Point(113, 323);
             this.txtBoxPswd2.Margin = new System.Windows.Forms.Padding(4);
             this.txtBoxPswd2.Name = "txtBoxPswd2";
+            this.txtBoxPswd2.PasswordChar = '*';
             this.txtBoxPswd2.Size = new System.Drawing.Size(150, 22);
             this.txtBoxPswd2.TabIndex = 7;
-            this.txtBoxPswd2.TextChanged += new System.EventHandler(this.txtBoxPswd2_TextChanged);
             // 
             // apellidoTextBox
             // 
-            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Apellido", true));
             this.apellidoTextBox.Location = new System.Drawing.Point(235, 84);
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(200, 22);
             this.apellidoTextBox.TabIndex = 2;
             // 
-            // table_Alumno_DBBindingSource
-            // 
-            this.table_Alumno_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Alumno_DB);
-            // 
             // emailTextBox
             // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "email", true));
             this.emailTextBox.Location = new System.Drawing.Point(235, 134);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(200, 22);
@@ -252,7 +246,6 @@
             // 
             // nombreTextBox
             // 
-            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Nombre", true));
             this.nombreTextBox.Location = new System.Drawing.Point(235, 31);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(200, 22);
@@ -262,17 +255,20 @@
             // 
             this.pswdTextBox.Location = new System.Drawing.Point(113, 257);
             this.pswdTextBox.Name = "pswdTextBox";
+            this.pswdTextBox.PasswordChar = '*';
             this.pswdTextBox.Size = new System.Drawing.Size(148, 22);
             this.pswdTextBox.TabIndex = 5;
-            this.pswdTextBox.TextChanged += new System.EventHandler(this.pswdTextBox_TextChanged);
             // 
             // usuarioTextBox
             // 
-            this.usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Usuario", true));
             this.usuarioTextBox.Location = new System.Drawing.Point(113, 200);
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(148, 22);
             this.usuarioTextBox.TabIndex = 4;
+            // 
+            // table_Alumno_DBBindingSource
+            // 
+            this.table_Alumno_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Alumno_DB);
             // 
             // table_Profesor_DBBindingSource
             // 

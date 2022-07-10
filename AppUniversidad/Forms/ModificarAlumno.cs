@@ -24,7 +24,7 @@ namespace AppUniversidad.Forms
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            //Captar datos, actualizar db y datagrid del profesor
+            //Actualizar datos del alumno
         }
     }
 }

@@ -17,8 +17,7 @@ namespace AppUniversidad.Forms
             InitializeComponent();
             textBox1.Text = mensaje;
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
             this.Close();
         }

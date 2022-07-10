@@ -64,11 +64,11 @@
     <Compile Include="Forms\Buscador.Designer.cs">
       <DependentUpon>Buscador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\InscripcionCarrera.cs">
+    <Compile Include="Forms\altaMaterias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\InscripcionCarrera.Designer.cs">
-      <DependentUpon>InscripcionCarrera.cs</DependentUpon>
+    <Compile Include="Forms\altaMaterias.Designer.cs">
+      <DependentUpon>altaMaterias.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
@@ -153,8 +153,8 @@
     <EmbeddedResource Include="Forms\Buscador.resx">
       <DependentUpon>Buscador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\InscripcionCarrera.resx">
-      <DependentUpon>InscripcionCarrera.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\altaMaterias.resx">
+      <DependentUpon>altaMaterias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

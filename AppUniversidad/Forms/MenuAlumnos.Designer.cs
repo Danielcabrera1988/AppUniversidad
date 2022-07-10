@@ -45,12 +45,12 @@
             this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.table_Materia__AlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgMateriasAlumnos = new System.Windows.Forms.DataGridView();
-            this.tableMateriaAlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Materias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Faltas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableMateriaAlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Materia__AlumnoBindingSource)).BeginInit();
@@ -179,10 +179,6 @@
             this.dgMateriasAlumnos.Size = new System.Drawing.Size(543, 327);
             this.dgMateriasAlumnos.TabIndex = 3;
             // 
-            // tableMateriaAlumnoBindingSource
-            // 
-            this.tableMateriaAlumnoBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materia__Alumno);
-            // 
             // Materias
             // 
             this.Materias.HeaderText = "Materias";
@@ -208,10 +204,15 @@
             this.Profesor.HeaderText = "Profesor";
             this.Profesor.Name = "Profesor";
             // 
+            // tableMateriaAlumnoBindingSource
+            // 
+            this.tableMateriaAlumnoBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materia__Alumno);
+            // 
             // MenuAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(543, 351);
             this.Controls.Add(this.dgMateriasAlumnos);
             this.Controls.Add(this.menuStrip1);

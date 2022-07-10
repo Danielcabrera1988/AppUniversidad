@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AppUniversidad.Forms
 {
-    public partial class InscripcionCarrera : Form
+    public partial class altaMaterias : Form
     {
-        public InscripcionCarrera()
+        public altaMaterias()
         {
             InitializeComponent();
         }

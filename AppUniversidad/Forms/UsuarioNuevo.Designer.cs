@@ -126,7 +126,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(10, 260);
+            this.label6.Location = new System.Drawing.Point(15, 260);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 17);
@@ -137,7 +137,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 326);
+            this.label7.Location = new System.Drawing.Point(15, 326);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 17);
@@ -232,21 +232,21 @@
             // 
             // apellidoTextBox
             // 
-            this.apellidoTextBox.Location = new System.Drawing.Point(235, 84);
+            this.apellidoTextBox.Location = new System.Drawing.Point(232, 82);
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(200, 22);
             this.apellidoTextBox.TabIndex = 2;
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(235, 134);
+            this.emailTextBox.Location = new System.Drawing.Point(232, 134);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(200, 22);
             this.emailTextBox.TabIndex = 3;
             // 
             // nombreTextBox
             // 
-            this.nombreTextBox.Location = new System.Drawing.Point(235, 31);
+            this.nombreTextBox.Location = new System.Drawing.Point(232, 34);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(200, 22);
             this.nombreTextBox.TabIndex = 1;

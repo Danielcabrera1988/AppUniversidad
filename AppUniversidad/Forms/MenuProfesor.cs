@@ -28,14 +28,13 @@ namespace AppUniversidad.Forms
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            //Modificar el alumno seleccionado
             ModificarAlumno modificar = new ModificarAlumno();
             modificar.Show();
         }
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            Login login = new Login();
-            login.Show();
         }
 
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)

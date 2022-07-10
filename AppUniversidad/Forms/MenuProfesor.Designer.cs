@@ -31,66 +31,53 @@
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tareasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.notasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.table_Alumno_DBDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.table_Materia__AlumnoDataGridView = new System.Windows.Forms.DataGridView();
+            this.columnaMateria_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnaAlumno_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreMateria_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_Alumno_4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota_5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.table_Materia__AlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.table_Profesor_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.table_AdmBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.table_Materia__AlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dB_UniversidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Materia__AlumnoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Materia__AlumnoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_AdmBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Materia__AlumnoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_UniversidadBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.archivoToolStripMenuItem,
-            this.ayudaToolStripMenuItem});
+            this.archivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(742, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(684, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.abrirToolStripMenuItem,
             this.guardarToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
-            // 
-            // abrirToolStripMenuItem
-            // 
-            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.abrirToolStripMenuItem.Text = "Abrir";
             // 
             // guardarToolStripMenuItem
             // 
@@ -105,27 +92,6 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tareasToolStripMenuItem,
-            this.notasToolStripMenuItem});
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.ayudaToolStripMenuItem.Text = "Agregar";
-            // 
-            // tareasToolStripMenuItem
-            // 
-            this.tareasToolStripMenuItem.Name = "tareasToolStripMenuItem";
-            this.tareasToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
-            this.tareasToolStripMenuItem.Text = "Tareas";
-            // 
-            // notasToolStripMenuItem
-            // 
-            this.notasToolStripMenuItem.Name = "notasToolStripMenuItem";
-            this.notasToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
-            this.notasToolStripMenuItem.Text = "Notas";
             // 
             // splitContainer1
             // 
@@ -142,9 +108,9 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.table_Alumno_DBDataGridView);
-            this.splitContainer1.Size = new System.Drawing.Size(742, 386);
-            this.splitContainer1.SplitterDistance = 151;
+            this.splitContainer1.Panel2.Controls.Add(this.table_Materia__AlumnoDataGridView);
+            this.splitContainer1.Size = new System.Drawing.Size(684, 386);
+            this.splitContainer1.SplitterDistance = 138;
             this.splitContainer1.TabIndex = 1;
             // 
             // btnBuscar
@@ -177,53 +143,55 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // table_Alumno_DBDataGridView
+            // table_Materia__AlumnoDataGridView
             // 
-            this.table_Alumno_DBDataGridView.AutoGenerateColumns = false;
-            this.table_Alumno_DBDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table_Alumno_DBDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.Materia});
-            this.table_Alumno_DBDataGridView.DataSource = this.table_Alumno_DBBindingSource;
-            this.table_Alumno_DBDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.table_Alumno_DBDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.table_Alumno_DBDataGridView.Name = "table_Alumno_DBDataGridView";
-            this.table_Alumno_DBDataGridView.Size = new System.Drawing.Size(587, 386);
-            this.table_Alumno_DBDataGridView.TabIndex = 0;
+            this.table_Materia__AlumnoDataGridView.AutoGenerateColumns = false;
+            this.table_Materia__AlumnoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.table_Materia__AlumnoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.columnaMateria_1,
+            this.columnaAlumno_2,
+            this.nombreMateria_3,
+            this.nombre_Alumno_4,
+            this.Nota_5});
+            this.table_Materia__AlumnoDataGridView.DataSource = this.table_Materia__AlumnoBindingSource;
+            this.table_Materia__AlumnoDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.table_Materia__AlumnoDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.table_Materia__AlumnoDataGridView.Name = "table_Materia__AlumnoDataGridView";
+            this.table_Materia__AlumnoDataGridView.Size = new System.Drawing.Size(542, 386);
+            this.table_Materia__AlumnoDataGridView.TabIndex = 0;
             // 
-            // dataGridViewTextBoxColumn1
+            // columnaMateria_1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.columnaMateria_1.DataPropertyName = "id_Materias";
+            this.columnaMateria_1.HeaderText = "id_Materias";
+            this.columnaMateria_1.Name = "columnaMateria_1";
             // 
-            // dataGridViewTextBoxColumn2
+            // columnaAlumno_2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.columnaAlumno_2.DataPropertyName = "id_Alumnos";
+            this.columnaAlumno_2.HeaderText = "id_Alumnos";
+            this.columnaAlumno_2.Name = "columnaAlumno_2";
             // 
-            // dataGridViewTextBoxColumn3
+            // nombreMateria_3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Apellido";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Apellido";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.nombreMateria_3.DataPropertyName = "Nombre_Materia";
+            this.nombreMateria_3.HeaderText = "Nombre_Materia";
+            this.nombreMateria_3.Name = "nombreMateria_3";
             // 
-            // dataGridViewTextBoxColumn10
+            // nombre_Alumno_4
             // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Notas";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Notas";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.nombre_Alumno_4.DataPropertyName = "Nombre_Alumno";
+            this.nombre_Alumno_4.HeaderText = "Nombre_Alumno";
+            this.nombre_Alumno_4.Name = "nombre_Alumno_4";
             // 
-            // dataGridViewTextBoxColumn11
+            // Nota_5
             // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Faltas";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Faltas";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.Nota_5.HeaderText = "Nota";
+            this.Nota_5.Name = "Nota_5";
+            // 
+            // table_Materia__AlumnoBindingSource
+            // 
+            this.table_Materia__AlumnoBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materia__Alumno);
             // 
             // table_Alumno_DBBindingSource
             // 
@@ -233,25 +201,17 @@
             // 
             this.table_Profesor_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Profesor_DB);
             // 
-            // table_AdmBindingSource
+            // dB_UniversidadBindingSource
             // 
-            this.table_AdmBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Adm);
-            // 
-            // table_Materia__AlumnoBindingSource
-            // 
-            this.table_Materia__AlumnoBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materia__Alumno);
-            // 
-            // Materia
-            // 
-            this.Materia.HeaderText = "Materia";
-            this.Materia.Name = "Materia";
+            this.dB_UniversidadBindingSource.DataSource = typeof(AppUniversidad.Model.DB_Universidad);
             // 
             // MenuProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(742, 410);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(684, 410);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -265,11 +225,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Materia__AlumnoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Materia__AlumnoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_AdmBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Materia__AlumnoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_UniversidadBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -280,25 +240,20 @@
         private System.Windows.Forms.BindingSource table_Profesor_DBBindingSource;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem abrirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView table_Alumno_DBDataGridView;
         private System.Windows.Forms.BindingSource table_Alumno_DBBindingSource;
-        private System.Windows.Forms.BindingSource table_AdmBindingSource;
         private System.Windows.Forms.BindingSource table_Materia__AlumnoBindingSource;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.ToolStripMenuItem tareasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem notasToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Materia;
+        private System.Windows.Forms.BindingSource dB_UniversidadBindingSource;
+        private System.Windows.Forms.DataGridView table_Materia__AlumnoDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnaMateria_1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnaAlumno_2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreMateria_3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_Alumno_4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nota_5;
     }
 }

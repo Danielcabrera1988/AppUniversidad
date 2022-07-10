@@ -54,7 +54,8 @@
           <Property Name="id_Materias" Type="int" />
           <Property Name="id_Alumnos" Type="int" />
           <Property Name="Nombre_Materia" Type="varchar" MaxLength="50" />
-          <Property Name="Nombre_Alumno" Type="nchar" MaxLength="10" />
+          <Property Name="Nombre_Alumno" Type="varchar" MaxLength="50" />
+          <Property Name="Nota" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Table_Materias_DB">
           <Key>
@@ -246,7 +247,8 @@
           <NavigationProperty Name="Table_Alumno_DB" Relationship="DB_Entity_UniversidadModel.FK_Table__Alumno_Materia" FromRole="Table_Materia__Alumno" ToRole="Table_Alumno_DB" />
           <NavigationProperty Name="Table_Materias_DB" Relationship="DB_Entity_UniversidadModel.FK_Table_Materia__Alumno" FromRole="Table_Materia__Alumno" ToRole="Table_Materias_DB" />
           <Property Name="Nombre_Materia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Nombre_Alumno" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Nombre_Alumno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nota" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Table_Materias_DB">
           <Key>
@@ -388,6 +390,7 @@
           <EntitySetMapping Name="Table_Materia__Alumno">
             <EntityTypeMapping TypeName="DB_Entity_UniversidadModel.Table_Materia__Alumno">
               <MappingFragment StoreEntitySet="Table_Materia__Alumno">
+                <ScalarProperty Name="Nota" ColumnName="Nota" />
                 <ScalarProperty Name="Nombre_Alumno" ColumnName="Nombre_Alumno" />
                 <ScalarProperty Name="Nombre_Materia" ColumnName="Nombre_Materia" />
                 <ScalarProperty Name="id_Alumnos" ColumnName="id_Alumnos" />

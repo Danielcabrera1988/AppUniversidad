@@ -34,12 +34,12 @@
             this.altaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.examenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.certificadoExamenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.faltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inscripcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carrerasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.licenciaturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tecnicaturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materiasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -51,7 +51,6 @@
             this.Faltas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableMateriaAlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Materia__AlumnoBindingSource)).BeginInit();
@@ -74,9 +73,8 @@
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.altaToolStripMenuItem,
-            this.bToolStripMenuItem,
-            this.faltasToolStripMenuItem,
             this.inscripcionesToolStripMenuItem,
+            this.faltasToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
@@ -94,20 +92,14 @@
             // examenToolStripMenuItem
             // 
             this.examenToolStripMenuItem.Name = "examenToolStripMenuItem";
-            this.examenToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.examenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.examenToolStripMenuItem.Text = "Examen";
             // 
             // certificadoExamenToolStripMenuItem
             // 
             this.certificadoExamenToolStripMenuItem.Name = "certificadoExamenToolStripMenuItem";
-            this.certificadoExamenToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.certificadoExamenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.certificadoExamenToolStripMenuItem.Text = "Certificado Examen";
-            // 
-            // bToolStripMenuItem
-            // 
-            this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bToolStripMenuItem.Text = "Dedudas";
             // 
             // faltasToolStripMenuItem
             // 
@@ -129,20 +121,27 @@
             // carrerasToolStripMenuItem
             // 
             this.carrerasToolStripMenuItem.Name = "carrerasToolStripMenuItem";
-            this.carrerasToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.carrerasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.carrerasToolStripMenuItem.Text = "Carreras";
             // 
             // licenciaturasToolStripMenuItem
             // 
             this.licenciaturasToolStripMenuItem.Name = "licenciaturasToolStripMenuItem";
-            this.licenciaturasToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.licenciaturasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.licenciaturasToolStripMenuItem.Text = "Licenciaturas";
             // 
             // tecnicaturasToolStripMenuItem
             // 
             this.tecnicaturasToolStripMenuItem.Name = "tecnicaturasToolStripMenuItem";
-            this.tecnicaturasToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.tecnicaturasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tecnicaturasToolStripMenuItem.Text = "Tecnicaturas";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click_1);
             // 
             // verToolStripMenuItem
             // 
@@ -155,7 +154,7 @@
             // materiasToolStripMenuItem
             // 
             this.materiasToolStripMenuItem.Name = "materiasToolStripMenuItem";
-            this.materiasToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.materiasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.materiasToolStripMenuItem.Text = "Materias";
             // 
             // table_Alumno_DBBindingSource
@@ -210,13 +209,6 @@
             // 
             this.tableMateriaAlumnoBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materia__Alumno);
             // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click_1);
-            // 
             // MenuAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,7 +237,6 @@
         private System.Windows.Forms.ToolStripMenuItem altaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem examenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem certificadoExamenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem faltasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inscripcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verToolStripMenuItem;

@@ -43,9 +43,6 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.archivoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnGuardarTXT = new System.Windows.Forms.ToolStripMenuItem();
-            this.jSONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -119,27 +116,27 @@
             this.altasAlumno,
             this.altasMateria});
             this.altasMenuItem.Name = "altasMenuItem";
-            this.altasMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.altasMenuItem.Size = new System.Drawing.Size(114, 22);
             this.altasMenuItem.Text = "Altas";
             // 
             // altaProfesor
             // 
             this.altaProfesor.Name = "altaProfesor";
-            this.altaProfesor.Size = new System.Drawing.Size(180, 22);
+            this.altaProfesor.Size = new System.Drawing.Size(122, 22);
             this.altaProfesor.Text = "Profesor";
             this.altaProfesor.Click += new System.EventHandler(this.altaProfesor_Click);
             // 
             // altasAlumno
             // 
             this.altasAlumno.Name = "altasAlumno";
-            this.altasAlumno.Size = new System.Drawing.Size(180, 22);
+            this.altasAlumno.Size = new System.Drawing.Size(122, 22);
             this.altasAlumno.Text = "Alumnos";
             this.altasAlumno.Click += new System.EventHandler(this.altasAlumnos);
             // 
             // altasMateria
             // 
             this.altasMateria.Name = "altasMateria";
-            this.altasMateria.Size = new System.Drawing.Size(180, 22);
+            this.altasMateria.Size = new System.Drawing.Size(122, 22);
             this.altasMateria.Text = "Materia";
             this.altasMateria.Click += new System.EventHandler(this.altaMateria);
             // 
@@ -150,7 +147,7 @@
             this.bajaAlumno,
             this.bajaMaterias});
             this.bajasToolStripMenuItem.Name = "bajasToolStripMenuItem";
-            this.bajasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bajasToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.bajasToolStripMenuItem.Text = "Bajas";
             // 
             // bajaProfesor
@@ -177,14 +174,14 @@
             // asignarToolStripMenuItem
             // 
             this.asignarToolStripMenuItem.Name = "asignarToolStripMenuItem";
-            this.asignarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.asignarToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.asignarToolStripMenuItem.Text = "Asignar";
             this.asignarToolStripMenuItem.Click += new System.EventHandler(this.asignarMateriasProfes);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -193,37 +190,15 @@
             this.exportarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem1});
             this.exportarToolStripMenuItem.Name = "exportarToolStripMenuItem";
-            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.exportarToolStripMenuItem.Text = "Exportar";
+            this.exportarToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.exportarToolStripMenuItem.Text = "Guardar";
             // 
             // archivoToolStripMenuItem1
             // 
-            this.archivoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnGuardarTXT,
-            this.jSONToolStripMenuItem,
-            this.xMLToolStripMenuItem});
             this.archivoToolStripMenuItem1.Name = "archivoToolStripMenuItem1";
-            this.archivoToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
+            this.archivoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.archivoToolStripMenuItem1.Text = "Archivo";
-            // 
-            // btnGuardarTXT
-            // 
-            this.btnGuardarTXT.Name = "btnGuardarTXT";
-            this.btnGuardarTXT.Size = new System.Drawing.Size(102, 22);
-            this.btnGuardarTXT.Text = "TXT";
-            this.btnGuardarTXT.Click += new System.EventHandler(this.btnGuardarTXT_Click);
-            // 
-            // jSONToolStripMenuItem
-            // 
-            this.jSONToolStripMenuItem.Name = "jSONToolStripMenuItem";
-            this.jSONToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
-            this.jSONToolStripMenuItem.Text = "JSON";
-            // 
-            // xMLToolStripMenuItem
-            // 
-            this.xMLToolStripMenuItem.Name = "xMLToolStripMenuItem";
-            this.xMLToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
-            this.xMLToolStripMenuItem.Text = "XML";
+            this.archivoToolStripMenuItem1.Click += new System.EventHandler(this.guardarArchivo);
             // 
             // splitContainer1
             // 
@@ -510,9 +485,6 @@
         private System.Windows.Forms.ToolStripMenuItem altaProfesor;
         private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem btnGuardarTXT;
-        private System.Windows.Forms.ToolStripMenuItem jSONToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xMLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altasMateria;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label1;

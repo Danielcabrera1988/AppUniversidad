@@ -1,12 +1,6 @@
 ﻿using AppUniversidad.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppUniversidad.Forms
@@ -37,7 +31,7 @@ namespace AppUniversidad.Forms
                 this.Close();
                 table_Alumno_DBBindingSource.DataSource = dc.Table_Alumno_DB.ToList();
             }
-            else MessageBox.Show("Valores ingresados incorrectos", "ALERTA");            
+            else MessageBox.Show("Valores ingresados incorrectos", "ALERTA");
         }
 
         private void ModificarAlumno_Load(object sender, EventArgs e)

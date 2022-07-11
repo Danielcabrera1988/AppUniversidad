@@ -96,8 +96,7 @@ namespace AppUniversidad.Forms
             table_Profesor_DBBindingSource.DataSource = dc.Table_Profesor_DB.ToList();
             table_Alumno_DBBindingSource.DataSource = dc.Table_Alumno_DB.ToList();
         }
-
-        private void btnGuardarTXT_Click(object sender, EventArgs e)
+        private void guardarArchivo(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Archivos TXT|*.txt";
@@ -107,16 +106,24 @@ namespace AppUniversidad.Forms
                 FileStream fileStream = new FileStream(saveFileDialog.FileName, FileMode.Create);
                 using (StreamWriter writer = new StreamWriter(fileStream))
                 {
-                    //if (alumno == null)
-                    //{
-                    //    alumno = new Table_Alumno_DB();
-                    //}
-                    //writer.WriteLine("Tabla de Alumnos");
-                    //foreach (DataGridViewRow data in table_Alumno_DBDataGridView.Rows)
-                    //{
-                    //    //Formato ==> Alumno: Fulano Merengue Nota: ? Faltas: ?
-                    //    writer.WriteLine("Alumno: " + data.Cells[0].Value + " " + data.Cells[1].Value + " Nota: " + data.Cells[2].Value + " Faltas: " + data.Cells[3].Value);
-                    //}
+                    writer.WriteLine("Tabla de Alumnos");
+                    foreach (DataGridViewRow data in table_Alumno_DBDataGridView.Rows)
+                    {
+                        //Formato ==> Alumno: Fulano Merengue
+                        writer.WriteLine("Alumno: " + data.Cells[0].Value + " " + data.Cells[1].Value);
+                    }
+                    writer.WriteLine("Tabla de Profesores");
+                    foreach (DataGridViewRow data in table_Profesor_DBDataGridView.Rows)
+                    {
+                        //Formato ==> Profesor: Fulano Merengue
+                        writer.WriteLine("Profesor: " + data.Cells[0].Value + " " + data.Cells[1].Value);
+                    }
+                    writer.WriteLine("Tabla de Materias");
+                    foreach (DataGridViewRow data in table_Materias_DBDataGridView.Rows)
+                    {
+                        //Formato ==> Alumno: Fulano Merengue Nota: ? Faltas: ?
+                        writer.WriteLine("Materia: " + data.Cells[0].Value);
+                    }
                 }
             }
         }

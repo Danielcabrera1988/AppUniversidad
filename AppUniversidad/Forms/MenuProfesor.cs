@@ -1,15 +1,8 @@
-﻿using AppUniversidad.Class;
-using AppUniversidad.Forms;
-using AppUniversidad.Model;
+﻿using AppUniversidad.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AppUniversidad.Forms
@@ -22,16 +15,16 @@ namespace AppUniversidad.Forms
         {
             InitializeComponent();
         }
-        
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-           table_Alumno_DBBindingSource.DataSource = dc.Table_Alumno_DB.Where(a=>a.Nombre == txtBoxBuscador.Text || a.Apellido == txtBoxBuscador.Text).ToList();            
+            table_Alumno_DBBindingSource.DataSource = dc.Table_Alumno_DB.Where(a => a.Nombre == txtBoxBuscador.Text || a.Apellido == txtBoxBuscador.Text).ToList();
         }
-        
+
         private void btnModificar_Click(object sender, EventArgs e)
         {
             //Modifica la nota y las faltas del alumno seleccionado
-            ModificarAlumno modificar = new ModificarAlumno();            
+            ModificarAlumno modificar = new ModificarAlumno();
             modificar.dc = this.dc;
             modificar.alumno = (Table_Alumno_DB)table_Alumno_DBBindingSource.Current;
             dc.SaveChanges();

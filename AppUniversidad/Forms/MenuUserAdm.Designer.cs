@@ -43,36 +43,36 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.archivoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tXTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGuardarTXT = new System.Windows.Forms.ToolStripMenuItem();
             this.jSONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.table_Alumno_DBDataGridView = new System.Windows.Forms.DataGridView();
-            this.table_Profesor_DBDataGridView = new System.Windows.Forms.DataGridView();
             this.table_Materias_DBDataGridView = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pswd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.table_Materias_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.table_Alumno_DBDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.table_Profesor_DBDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.table_Profesor_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.table_Materias_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_UniversidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -81,12 +81,12 @@
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Materias_DBDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Materias_DBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_UniversidadBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,27 +119,27 @@
             this.altasAlumno,
             this.altasMateria});
             this.altasMenuItem.Name = "altasMenuItem";
-            this.altasMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.altasMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altasMenuItem.Text = "Altas";
             // 
             // altaProfesor
             // 
             this.altaProfesor.Name = "altaProfesor";
-            this.altaProfesor.Size = new System.Drawing.Size(122, 22);
+            this.altaProfesor.Size = new System.Drawing.Size(180, 22);
             this.altaProfesor.Text = "Profesor";
             this.altaProfesor.Click += new System.EventHandler(this.altaProfesor_Click);
             // 
             // altasAlumno
             // 
             this.altasAlumno.Name = "altasAlumno";
-            this.altasAlumno.Size = new System.Drawing.Size(122, 22);
+            this.altasAlumno.Size = new System.Drawing.Size(180, 22);
             this.altasAlumno.Text = "Alumnos";
             this.altasAlumno.Click += new System.EventHandler(this.altasAlumnos);
             // 
             // altasMateria
             // 
             this.altasMateria.Name = "altasMateria";
-            this.altasMateria.Size = new System.Drawing.Size(122, 22);
+            this.altasMateria.Size = new System.Drawing.Size(180, 22);
             this.altasMateria.Text = "Materia";
             this.altasMateria.Click += new System.EventHandler(this.altaMateria);
             // 
@@ -150,7 +150,7 @@
             this.bajaAlumno,
             this.bajaMaterias});
             this.bajasToolStripMenuItem.Name = "bajasToolStripMenuItem";
-            this.bajasToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.bajasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bajasToolStripMenuItem.Text = "Bajas";
             // 
             // bajaProfesor
@@ -177,14 +177,14 @@
             // asignarToolStripMenuItem
             // 
             this.asignarToolStripMenuItem.Name = "asignarToolStripMenuItem";
-            this.asignarToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.asignarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.asignarToolStripMenuItem.Text = "Asignar";
             this.asignarToolStripMenuItem.Click += new System.EventHandler(this.asignarMateriasProfes);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -199,19 +199,19 @@
             // archivoToolStripMenuItem1
             // 
             this.archivoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tXTToolStripMenuItem,
+            this.btnGuardarTXT,
             this.jSONToolStripMenuItem,
             this.xMLToolStripMenuItem});
             this.archivoToolStripMenuItem1.Name = "archivoToolStripMenuItem1";
             this.archivoToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
             this.archivoToolStripMenuItem1.Text = "Archivo";
             // 
-            // tXTToolStripMenuItem
+            // btnGuardarTXT
             // 
-            this.tXTToolStripMenuItem.Name = "tXTToolStripMenuItem";
-            this.tXTToolStripMenuItem.Size = new System.Drawing.Size(102, 22);
-            this.tXTToolStripMenuItem.Text = "TXT";
-            this.tXTToolStripMenuItem.Click += new System.EventHandler(this.tXTToolStripMenuItem_Click);
+            this.btnGuardarTXT.Name = "btnGuardarTXT";
+            this.btnGuardarTXT.Size = new System.Drawing.Size(102, 22);
+            this.btnGuardarTXT.Text = "TXT";
+            this.btnGuardarTXT.Click += new System.EventHandler(this.btnGuardarTXT_Click);
             // 
             // jSONToolStripMenuItem
             // 
@@ -228,7 +228,6 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Enabled = false;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 24);
@@ -246,6 +245,16 @@
             this.splitContainer1.Size = new System.Drawing.Size(781, 419);
             this.splitContainer1.SplitterDistance = 217;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label3.Location = new System.Drawing.Point(0, 406);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(113, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "CopyRight 2022 Lab 3";
             // 
             // label1
             // 
@@ -271,14 +280,15 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.AutoScroll = true;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.table_Materias_DBDataGridView, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.table_Alumno_DBDataGridView, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.table_Profesor_DBDataGridView, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.table_Materias_DBDataGridView, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -287,6 +297,36 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(560, 419);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
+            // table_Materias_DBDataGridView
+            // 
+            this.table_Materias_DBDataGridView.AutoGenerateColumns = false;
+            this.table_Materias_DBDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.table_Materias_DBDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn4});
+            this.table_Materias_DBDataGridView.DataSource = this.table_Materias_DBBindingSource;
+            this.table_Materias_DBDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.table_Materias_DBDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.table_Materias_DBDataGridView.Name = "table_Materias_DBDataGridView";
+            this.table_Materias_DBDataGridView.Size = new System.Drawing.Size(180, 413);
+            this.table_Materias_DBDataGridView.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "id_Profesor";
+            this.dataGridViewTextBoxColumn4.HeaderText = "id_Profesor";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // table_Materias_DBBindingSource
+            // 
+            this.table_Materias_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materias_DB);
+            // 
             // table_Alumno_DBDataGridView
             // 
             this.table_Alumno_DBDataGridView.AutoGenerateColumns = false;
@@ -294,126 +334,17 @@
             this.table_Alumno_DBDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.Direccion,
-            this.dataGridViewTextBoxColumn6});
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26});
             this.table_Alumno_DBDataGridView.DataSource = this.table_Alumno_DBBindingSource;
             this.table_Alumno_DBDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.table_Alumno_DBDataGridView.Location = new System.Drawing.Point(375, 3);
             this.table_Alumno_DBDataGridView.Name = "table_Alumno_DBDataGridView";
             this.table_Alumno_DBDataGridView.Size = new System.Drawing.Size(182, 413);
             this.table_Alumno_DBDataGridView.TabIndex = 2;
-            // 
-            // table_Profesor_DBDataGridView
-            // 
-            this.table_Profesor_DBDataGridView.AutoGenerateColumns = false;
-            this.table_Profesor_DBDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table_Profesor_DBDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.Usuario,
-            this.Pswd,
-            this.email,
-            this.Telefono,
-            this.FechaNacimiento});
-            this.table_Profesor_DBDataGridView.DataSource = this.table_Profesor_DBBindingSource;
-            this.table_Profesor_DBDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.table_Profesor_DBDataGridView.Location = new System.Drawing.Point(189, 3);
-            this.table_Profesor_DBDataGridView.Name = "table_Profesor_DBDataGridView";
-            this.table_Profesor_DBDataGridView.Size = new System.Drawing.Size(180, 413);
-            this.table_Profesor_DBDataGridView.TabIndex = 1;
-            // 
-            // table_Materias_DBDataGridView
-            // 
-            this.table_Materias_DBDataGridView.AutoGenerateColumns = false;
-            this.table_Materias_DBDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.table_Materias_DBDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2});
-            this.table_Materias_DBDataGridView.DataSource = this.table_Materias_DBBindingSource;
-            this.table_Materias_DBDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.table_Materias_DBDataGridView.Location = new System.Drawing.Point(3, 3);
-            this.table_Materias_DBDataGridView.Name = "table_Materias_DBDataGridView";
-            this.table_Materias_DBDataGridView.Size = new System.Drawing.Size(180, 413);
-            this.table_Materias_DBDataGridView.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label3.Location = new System.Drawing.Point(0, 406);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "CopyRight 2022 Lab 3";
-            // 
-            // Usuario
-            // 
-            this.Usuario.DataPropertyName = "Usuario";
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.Name = "Usuario";
-            // 
-            // Pswd
-            // 
-            this.Pswd.DataPropertyName = "Pswd";
-            this.Pswd.HeaderText = "Pswd";
-            this.Pswd.Name = "Pswd";
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "email";
-            this.email.Name = "email";
-            // 
-            // Telefono
-            // 
-            this.Telefono.DataPropertyName = "Telefono";
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            // 
-            // FechaNacimiento
-            // 
-            this.FechaNacimiento.DataPropertyName = "FechaNacimiento";
-            this.FechaNacimiento.HeaderText = "FechaNacimiento";
-            this.FechaNacimiento.Name = "FechaNacimiento";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Usuario";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Usuario";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Pswd";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Pswd";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "email";
-            this.dataGridViewTextBoxColumn4.HeaderText = "email";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Telefono";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Telefono";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // Direccion
-            // 
-            this.Direccion.DataPropertyName = "Direccion";
-            this.Direccion.HeaderText = "Direccion";
-            this.Direccion.Name = "Direccion";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "FechaNacimiento";
-            this.dataGridViewTextBoxColumn6.HeaderText = "FechaNacimiento";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // dataGridViewTextBoxColumn19
             // 
@@ -427,9 +358,58 @@
             this.dataGridViewTextBoxColumn20.HeaderText = "Apellido";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "Usuario";
+            this.dataGridViewTextBoxColumn21.HeaderText = "Usuario";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "email";
+            this.dataGridViewTextBoxColumn23.HeaderText = "email";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "Telefono";
+            this.dataGridViewTextBoxColumn24.HeaderText = "Telefono";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "Direccion";
+            this.dataGridViewTextBoxColumn25.HeaderText = "Direccion";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "FechaNacimiento";
+            this.dataGridViewTextBoxColumn26.HeaderText = "FechaNacimiento";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            // 
             // table_Alumno_DBBindingSource
             // 
             this.table_Alumno_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Alumno_DB);
+            // 
+            // table_Profesor_DBDataGridView
+            // 
+            this.table_Profesor_DBDataGridView.AutoGenerateColumns = false;
+            this.table_Profesor_DBDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.table_Profesor_DBDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14});
+            this.table_Profesor_DBDataGridView.DataSource = this.table_Profesor_DBBindingSource;
+            this.table_Profesor_DBDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.table_Profesor_DBDataGridView.Location = new System.Drawing.Point(189, 3);
+            this.table_Profesor_DBDataGridView.Name = "table_Profesor_DBDataGridView";
+            this.table_Profesor_DBDataGridView.Size = new System.Drawing.Size(180, 413);
+            this.table_Profesor_DBDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -443,19 +423,39 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "Apellido";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Usuario";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Usuario";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "email";
+            this.dataGridViewTextBoxColumn11.HeaderText = "email";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Telefono";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Telefono";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Direccion";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Direccion";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "FechaNacimiento";
+            this.dataGridViewTextBoxColumn14.HeaderText = "FechaNacimiento";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            // 
             // table_Profesor_DBBindingSource
             // 
             this.table_Profesor_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Profesor_DB);
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // table_Materias_DBBindingSource
-            // 
-            this.table_Materias_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materias_DB);
             // 
             // dB_UniversidadBindingSource
             // 
@@ -483,12 +483,12 @@
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Materias_DBDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Materias_DBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_UniversidadBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -500,8 +500,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.BindingSource dB_UniversidadBindingSource;
-        private System.Windows.Forms.BindingSource table_Profesor_DBBindingSource;
-        private System.Windows.Forms.BindingSource table_Alumno_DBBindingSource;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altasMenuItem;
         private System.Windows.Forms.ToolStripMenuItem altasAlumno;
@@ -512,35 +510,37 @@
         private System.Windows.Forms.ToolStripMenuItem altaProfesor;
         private System.Windows.Forms.ToolStripMenuItem exportarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem tXTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnGuardarTXT;
         private System.Windows.Forms.ToolStripMenuItem jSONToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xMLToolStripMenuItem;
-        private System.Windows.Forms.BindingSource table_Materias_DBBindingSource;
         private System.Windows.Forms.ToolStripMenuItem altasMateria;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridView table_Alumno_DBDataGridView;
-        private System.Windows.Forms.DataGridView table_Profesor_DBDataGridView;
-        private System.Windows.Forms.DataGridView table_Materias_DBDataGridView;
         private System.Windows.Forms.ToolStripMenuItem bajaMaterias;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.BindingSource table_Materias_DBBindingSource;
+        private System.Windows.Forms.BindingSource table_Profesor_DBBindingSource;
+        private System.Windows.Forms.BindingSource table_Alumno_DBBindingSource;
+        private System.Windows.Forms.DataGridView table_Alumno_DBDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridView table_Profesor_DBDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pswd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaNacimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridView table_Materias_DBDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

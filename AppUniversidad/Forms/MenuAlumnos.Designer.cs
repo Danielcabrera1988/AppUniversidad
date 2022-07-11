@@ -51,6 +51,7 @@
             this.Faltas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableMateriaAlumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table_Materia__AlumnoBindingSource)).BeginInit();
@@ -75,7 +76,8 @@
             this.altaToolStripMenuItem,
             this.bToolStripMenuItem,
             this.faltasToolStripMenuItem,
-            this.inscripcionesToolStripMenuItem});
+            this.inscripcionesToolStripMenuItem,
+            this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.archivoToolStripMenuItem.Text = "Solicitudes";
@@ -86,7 +88,7 @@
             this.examenToolStripMenuItem,
             this.certificadoExamenToolStripMenuItem});
             this.altaToolStripMenuItem.Name = "altaToolStripMenuItem";
-            this.altaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.altaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.altaToolStripMenuItem.Text = "Alta / Baja";
             // 
             // examenToolStripMenuItem
@@ -104,13 +106,13 @@
             // bToolStripMenuItem
             // 
             this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.bToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bToolStripMenuItem.Text = "Dedudas";
             // 
             // faltasToolStripMenuItem
             // 
             this.faltasToolStripMenuItem.Name = "faltasToolStripMenuItem";
-            this.faltasToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.faltasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.faltasToolStripMenuItem.Text = "Faltas";
             this.faltasToolStripMenuItem.Click += new System.EventHandler(this.faltasToolStripMenuItem_Click);
             // 
@@ -121,7 +123,7 @@
             this.licenciaturasToolStripMenuItem,
             this.tecnicaturasToolStripMenuItem});
             this.inscripcionesToolStripMenuItem.Name = "inscripcionesToolStripMenuItem";
-            this.inscripcionesToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.inscripcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.inscripcionesToolStripMenuItem.Text = "Inscripciones";
             // 
             // carrerasToolStripMenuItem
@@ -208,6 +210,13 @@
             // 
             this.tableMateriaAlumnoBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materia__Alumno);
             // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click_1);
+            // 
             // MenuAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,5 +262,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Faltas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Profesor;
         private System.Windows.Forms.BindingSource tableMateriaAlumnoBindingSource;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

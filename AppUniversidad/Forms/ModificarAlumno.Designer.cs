@@ -33,7 +33,6 @@
             System.Windows.Forms.Label faltasLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label notasLabel;
-            this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.faltasTextBox = new System.Windows.Forms.TextBox();
             this.notasTextBox = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -41,12 +40,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
+            this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             apellidoLabel = new System.Windows.Forms.Label();
             faltasLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             notasLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // apellidoLabel
@@ -88,10 +88,6 @@
             notasLabel.Size = new System.Drawing.Size(50, 17);
             notasLabel.TabIndex = 35;
             notasLabel.Text = "Notas:";
-            // 
-            // table_Alumno_DBBindingSource
-            // 
-            this.table_Alumno_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Alumno_DB);
             // 
             // faltasTextBox
             // 
@@ -163,8 +159,13 @@
             this.lblApellido.TabIndex = 41;
             this.lblApellido.Text = "label2";
             // 
+            // table_Alumno_DBBindingSource
+            // 
+            this.table_Alumno_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Alumno_DB);
+            // 
             // ModificarAlumno
             // 
+            this.AcceptButton = this.btnAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -182,8 +183,9 @@
             this.Controls.Add(this.notasTextBox);
             this.Name = "ModificarAlumno";
             this.Text = "Modificar Alumno";
-            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).EndInit();
+            this.Load += new System.EventHandler(this.ModificarAlumno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Alumno_DBBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

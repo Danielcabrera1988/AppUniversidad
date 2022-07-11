@@ -178,6 +178,9 @@
     <Compile Include="Model\Table_Materias_DB.cs">
       <DependentUpon>DB_Universidad.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Table_Materias_Profe.cs">
+      <DependentUpon>DB_Universidad.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Table_Materia__Alumno.cs">
       <DependentUpon>DB_Universidad.tt</DependentUpon>
     </Compile>

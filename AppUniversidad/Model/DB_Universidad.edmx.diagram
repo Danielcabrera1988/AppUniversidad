@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="36ad683ce58a4b51b08d8685973c4b7b" Name="Diagram1" ZoomLevel="97">
         <EntityTypeShape EntityType="DB_Entity_UniversidadModel.sysdiagrams" Width="1.5" PointX="7.875" PointY="0.5" />
-        <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Adm" Width="1.5" PointX="6.375" PointY="3.125" />
+        <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Adm" Width="1.5" PointX="9.625" PointY="0.5" />
         <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Alumno_DB" Width="1.5" PointX="0.625" PointY="0.5" />
         <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Materia__Alumno" Width="1.5" PointX="2.875" PointY="0.5" />
         <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Materias_DB" Width="1.5" PointX="5.125" PointY="0.5" />
@@ -16,6 +16,9 @@
         <AssociationConnector Association="DB_Entity_UniversidadModel.FK_Table_Profesor_Alumno_Table_Alumno_DB" />
         <AssociationConnector Association="DB_Entity_UniversidadModel.FK_Table_Materia__Alumno" />
         <AssociationConnector Association="DB_Entity_UniversidadModel.FK_Table_Profesor_Alumno_Table_Profesor_DB" />
+        <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Materias_Profe" Width="1.5" PointX="6.625" PointY="3.375" IsExpanded="true" />
+        <AssociationConnector Association="DB_Entity_UniversidadModel.FK_Table_Materias_Profe_" />
+        <AssociationConnector Association="DB_Entity_UniversidadModel.FK_Table_Materias_Profe" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

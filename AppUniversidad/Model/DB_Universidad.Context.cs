@@ -32,5 +32,6 @@ namespace AppUniversidad.Model
         public virtual DbSet<Table_Materias_DB> Table_Materias_DB { get; set; }
         public virtual DbSet<Table_Profesor_Alumno> Table_Profesor_Alumno { get; set; }
         public virtual DbSet<Table_Profesor_DB> Table_Profesor_DB { get; set; }
+        public virtual DbSet<Table_Materias_Profe> Table_Materias_Profe { get; set; }
     }
 }

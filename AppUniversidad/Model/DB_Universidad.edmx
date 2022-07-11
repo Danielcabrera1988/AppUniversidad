@@ -66,6 +66,16 @@
           <Property Name="id_Alumno" Type="int" />
           <Property Name="id_Profesor" Type="int" />
         </EntityType>
+        <EntityType Name="Table_Materias_Profe">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Materia" Type="int" />
+          <Property Name="id_Profesor" Type="int" />
+          <Property Name="Nombre_Materia" Type="varchar" MaxLength="50" />
+          <Property Name="Nombre_Profesor" Type="varchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Table_Profesor_Alumno">
           <Key>
             <PropertyRef Name="ID" />
@@ -116,6 +126,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Table_Materias_Profe">
+          <End Role="Table_Profesor_DB" Type="Self.Table_Profesor_DB" Multiplicity="0..1" />
+          <End Role="Table_Materias_Profe" Type="Self.Table_Materias_Profe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Profesor_DB">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Table_Materias_Profe">
+              <PropertyRef Name="id_Profesor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_Materias_Profe_">
+          <End Role="Table_Materias_DB" Type="Self.Table_Materias_DB" Multiplicity="0..1" />
+          <End Role="Table_Materias_Profe" Type="Self.Table_Materias_Profe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Materias_DB">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Table_Materias_Profe">
+              <PropertyRef Name="id_Materia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Table_Profesor_Alumno_Table_Alumno_DB">
           <End Role="Table_Alumno_DB" Type="Self.Table_Alumno_DB" Multiplicity="0..1" />
           <End Role="Table_Profesor_Alumno" Type="Self.Table_Profesor_Alumno" Multiplicity="*" />
@@ -146,6 +180,7 @@
           <EntitySet Name="Table_Alumno_DB" EntityType="Self.Table_Alumno_DB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_Materia__Alumno" EntityType="Self.Table_Materia__Alumno" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_Materias_DB" EntityType="Self.Table_Materias_DB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Materias_Profe" EntityType="Self.Table_Materias_Profe" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_Profesor_Alumno" EntityType="Self.Table_Profesor_Alumno" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_Profesor_DB" EntityType="Self.Table_Profesor_DB" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Table__Alumno_Materia" Association="Self.FK_Table__Alumno_Materia">
@@ -155,6 +190,14 @@
           <AssociationSet Name="FK_Table_Materia__Alumno" Association="Self.FK_Table_Materia__Alumno">
             <End Role="Table_Materias_DB" EntitySet="Table_Materias_DB" />
             <End Role="Table_Materia__Alumno" EntitySet="Table_Materia__Alumno" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_Materias_Profe" Association="Self.FK_Table_Materias_Profe">
+            <End Role="Table_Profesor_DB" EntitySet="Table_Profesor_DB" />
+            <End Role="Table_Materias_Profe" EntitySet="Table_Materias_Profe" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_Materias_Profe_" Association="Self.FK_Table_Materias_Profe_">
+            <End Role="Table_Materias_DB" EntitySet="Table_Materias_DB" />
+            <End Role="Table_Materias_Profe" EntitySet="Table_Materias_Profe" />
           </AssociationSet>
           <AssociationSet Name="FK_Table_Profesor_Alumno_Table_Alumno_DB" Association="Self.FK_Table_Profesor_Alumno_Table_Alumno_DB">
             <End Role="Table_Alumno_DB" EntitySet="Table_Alumno_DB" />
@@ -192,6 +235,15 @@
           <AssociationSet Name="FK_Table_Profesor_Alumno_Table_Profesor_DB" Association="DB_Entity_UniversidadModel.FK_Table_Profesor_Alumno_Table_Profesor_DB">
             <End Role="Table_Profesor_DB" EntitySet="Table_Profesor_DB" />
             <End Role="Table_Profesor_Alumno" EntitySet="Table_Profesor_Alumno" />
+          </AssociationSet>
+          <EntitySet Name="Table_Materias_Profe" EntityType="DB_Entity_UniversidadModel.Table_Materias_Profe" />
+          <AssociationSet Name="FK_Table_Materias_Profe_" Association="DB_Entity_UniversidadModel.FK_Table_Materias_Profe_">
+            <End Role="Table_Materias_DB" EntitySet="Table_Materias_DB" />
+            <End Role="Table_Materias_Profe" EntitySet="Table_Materias_Profe" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Table_Materias_Profe" Association="DB_Entity_UniversidadModel.FK_Table_Materias_Profe">
+            <End Role="Table_Profesor_DB" EntitySet="Table_Profesor_DB" />
+            <End Role="Table_Materias_Profe" EntitySet="Table_Materias_Profe" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="sysdiagrams">
@@ -259,6 +311,7 @@
           <Property Name="id_Alumno" Type="Int32" />
           <Property Name="id_Profesor" Type="Int32" />
           <NavigationProperty Name="Table_Materia__Alumno" Relationship="DB_Entity_UniversidadModel.FK_Table_Materia__Alumno" FromRole="Table_Materias_DB" ToRole="Table_Materia__Alumno" />
+          <NavigationProperty Name="Table_Materias_Profe" Relationship="DB_Entity_UniversidadModel.FK_Table_Materias_Profe_" FromRole="Table_Materias_DB" ToRole="Table_Materias_Profe" />
         </EntityType>
         <EntityType Name="Table_Profesor_Alumno">
           <Key>
@@ -288,6 +341,7 @@
           <Property Name="id_Alumno" Type="Int32" />
           <Property Name="id_Materia" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="Table_Profesor_Alumno" Relationship="DB_Entity_UniversidadModel.FK_Table_Profesor_Alumno_Table_Profesor_DB" FromRole="Table_Profesor_DB" ToRole="Table_Profesor_Alumno" />
+          <NavigationProperty Name="Table_Materias_Profe" Relationship="DB_Entity_UniversidadModel.FK_Table_Materias_Profe" FromRole="Table_Profesor_DB" ToRole="Table_Materias_Profe" />
         </EntityType>
         <Association Name="FK_Table__Alumno_Materia">
           <End Type="DB_Entity_UniversidadModel.Table_Alumno_DB" Role="Table_Alumno_DB" Multiplicity="0..1" />
@@ -333,6 +387,42 @@
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="Table_Profesor_Alumno">
+              <PropertyRef Name="id_Profesor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Table_Materias_Profe">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Materia" Type="Int32" />
+          <Property Name="id_Profesor" Type="Int32" />
+          <Property Name="Nombre_Materia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre_Profesor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Table_Materias_DB" Relationship="DB_Entity_UniversidadModel.FK_Table_Materias_Profe_" FromRole="Table_Materias_Profe" ToRole="Table_Materias_DB" />
+          <NavigationProperty Name="Table_Profesor_DB" Relationship="DB_Entity_UniversidadModel.FK_Table_Materias_Profe" FromRole="Table_Materias_Profe" ToRole="Table_Profesor_DB" />
+        </EntityType>
+        <Association Name="FK_Table_Materias_Profe_">
+          <End Type="DB_Entity_UniversidadModel.Table_Materias_DB" Role="Table_Materias_DB" Multiplicity="0..1" />
+          <End Type="DB_Entity_UniversidadModel.Table_Materias_Profe" Role="Table_Materias_Profe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Materias_DB">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Table_Materias_Profe">
+              <PropertyRef Name="id_Materia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Table_Materias_Profe">
+          <End Type="DB_Entity_UniversidadModel.Table_Profesor_DB" Role="Table_Profesor_DB" Multiplicity="0..1" />
+          <End Type="DB_Entity_UniversidadModel.Table_Materias_Profe" Role="Table_Materias_Profe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Table_Profesor_DB">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Table_Materias_Profe">
               <PropertyRef Name="id_Profesor" />
             </Dependent>
           </ReferentialConstraint>
@@ -433,6 +523,17 @@
                 <ScalarProperty Name="Usuario" ColumnName="Usuario" />
                 <ScalarProperty Name="Apellido" ColumnName="Apellido" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Materias_Profe">
+            <EntityTypeMapping TypeName="DB_Entity_UniversidadModel.Table_Materias_Profe">
+              <MappingFragment StoreEntitySet="Table_Materias_Profe">
+                <ScalarProperty Name="Nombre_Profesor" ColumnName="Nombre_Profesor" />
+                <ScalarProperty Name="Nombre_Materia" ColumnName="Nombre_Materia" />
+                <ScalarProperty Name="id_Profesor" ColumnName="id_Profesor" />
+                <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -196,7 +196,7 @@
             // archivoToolStripMenuItem1
             // 
             this.archivoToolStripMenuItem1.Name = "archivoToolStripMenuItem1";
-            this.archivoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.archivoToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
             this.archivoToolStripMenuItem1.Text = "Archivo";
             this.archivoToolStripMenuItem1.Click += new System.EventHandler(this.guardarArchivo);
             // 

@@ -68,7 +68,7 @@
             this.txtBoxUser.Location = new System.Drawing.Point(163, 55);
             this.txtBoxUser.Name = "txtBoxUser";
             this.txtBoxUser.Size = new System.Drawing.Size(268, 23);
-            this.txtBoxUser.TabIndex = 3;
+            this.txtBoxUser.TabIndex = 1;
             this.txtBoxUser.Text = "USUARIO";
             this.txtBoxUser.Enter += new System.EventHandler(this.txtBoxUser_Enter);
             this.txtBoxUser.Leave += new System.EventHandler(this.txtBoxUser_Leave);
@@ -80,7 +80,7 @@
             this.txtBoxPass.Location = new System.Drawing.Point(163, 101);
             this.txtBoxPass.Name = "txtBoxPass";
             this.txtBoxPass.Size = new System.Drawing.Size(268, 23);
-            this.txtBoxPass.TabIndex = 4;
+            this.txtBoxPass.TabIndex = 2;
             this.txtBoxPass.Text = "CONTRASEÑA";
             this.txtBoxPass.Enter += new System.EventHandler(this.txtBoxPass_Enter);
             this.txtBoxPass.Leave += new System.EventHandler(this.txtBoxPass_Leave);
@@ -91,7 +91,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(163, 144);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 5;
+            this.btnAceptar.TabIndex = 3;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);

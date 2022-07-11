@@ -19,6 +19,7 @@
         <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Materias_Profe" Width="1.5" PointX="6.625" PointY="3.375" IsExpanded="true" />
         <AssociationConnector Association="DB_Entity_UniversidadModel.FK_Table_Materias_Profe_" />
         <AssociationConnector Association="DB_Entity_UniversidadModel.FK_Table_Materias_Profe" />
+        <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Adm_MP" Width="1.5" PointX="6.375" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

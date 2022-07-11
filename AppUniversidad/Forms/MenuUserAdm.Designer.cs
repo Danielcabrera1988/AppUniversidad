@@ -62,6 +62,9 @@
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.table_Profesor_DBDataGridView = new System.Windows.Forms.DataGridView();
+            this.table_Profesor_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_UniversidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,8 +72,6 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.table_Profesor_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_UniversidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -283,6 +284,7 @@
             this.table_Materias_DBDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.table_Materias_DBDataGridView.Location = new System.Drawing.Point(3, 3);
             this.table_Materias_DBDataGridView.Name = "table_Materias_DBDataGridView";
+            this.table_Materias_DBDataGridView.ReadOnly = true;
             this.table_Materias_DBDataGridView.Size = new System.Drawing.Size(180, 413);
             this.table_Materias_DBDataGridView.TabIndex = 2;
             // 
@@ -291,12 +293,14 @@
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
             this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "id_Profesor";
             this.dataGridViewTextBoxColumn4.HeaderText = "id_Profesor";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // table_Materias_DBBindingSource
             // 
@@ -318,6 +322,7 @@
             this.table_Alumno_DBDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.table_Alumno_DBDataGridView.Location = new System.Drawing.Point(375, 3);
             this.table_Alumno_DBDataGridView.Name = "table_Alumno_DBDataGridView";
+            this.table_Alumno_DBDataGridView.ReadOnly = true;
             this.table_Alumno_DBDataGridView.Size = new System.Drawing.Size(182, 413);
             this.table_Alumno_DBDataGridView.TabIndex = 2;
             // 
@@ -326,42 +331,49 @@
             this.dataGridViewTextBoxColumn19.DataPropertyName = "Nombre";
             this.dataGridViewTextBoxColumn19.HeaderText = "Nombre";
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn20
             // 
             this.dataGridViewTextBoxColumn20.DataPropertyName = "Apellido";
             this.dataGridViewTextBoxColumn20.HeaderText = "Apellido";
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn21
             // 
             this.dataGridViewTextBoxColumn21.DataPropertyName = "Usuario";
             this.dataGridViewTextBoxColumn21.HeaderText = "Usuario";
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn23
             // 
             this.dataGridViewTextBoxColumn23.DataPropertyName = "email";
             this.dataGridViewTextBoxColumn23.HeaderText = "email";
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn24
             // 
             this.dataGridViewTextBoxColumn24.DataPropertyName = "Telefono";
             this.dataGridViewTextBoxColumn24.HeaderText = "Telefono";
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn25
             // 
             this.dataGridViewTextBoxColumn25.DataPropertyName = "Direccion";
             this.dataGridViewTextBoxColumn25.HeaderText = "Direccion";
             this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn26
             // 
             this.dataGridViewTextBoxColumn26.DataPropertyName = "FechaNacimiento";
             this.dataGridViewTextBoxColumn26.HeaderText = "FechaNacimiento";
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.ReadOnly = true;
             // 
             // table_Alumno_DBBindingSource
             // 
@@ -372,6 +384,7 @@
             this.table_Profesor_DBDataGridView.AutoGenerateColumns = false;
             this.table_Profesor_DBDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.table_Profesor_DBDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
@@ -383,50 +396,9 @@
             this.table_Profesor_DBDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.table_Profesor_DBDataGridView.Location = new System.Drawing.Point(189, 3);
             this.table_Profesor_DBDataGridView.Name = "table_Profesor_DBDataGridView";
+            this.table_Profesor_DBDataGridView.ReadOnly = true;
             this.table_Profesor_DBDataGridView.Size = new System.Drawing.Size(180, 413);
             this.table_Profesor_DBDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Apellido";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Apellido";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Usuario";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Usuario";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "email";
-            this.dataGridViewTextBoxColumn11.HeaderText = "email";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Telefono";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Telefono";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Direccion";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Direccion";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "FechaNacimiento";
-            this.dataGridViewTextBoxColumn14.HeaderText = "FechaNacimiento";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
             // table_Profesor_DBBindingSource
             // 
@@ -435,6 +407,63 @@
             // dB_UniversidadBindingSource
             // 
             this.dB_UniversidadBindingSource.DataSource = typeof(AppUniversidad.Model.DB_Universidad);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 30;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Apellido";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Apellido";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Usuario";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Usuario";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "email";
+            this.dataGridViewTextBoxColumn11.HeaderText = "email";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Telefono";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Telefono";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Direccion";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Direccion";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "FechaNacimiento";
+            this.dataGridViewTextBoxColumn14.HeaderText = "FechaNacimiento";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
             // 
             // MenuUserAdm
             // 
@@ -504,6 +533,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
         private System.Windows.Forms.DataGridView table_Profesor_DBDataGridView;
+        private System.Windows.Forms.DataGridView table_Materias_DBDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
@@ -511,8 +544,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridView table_Materias_DBDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

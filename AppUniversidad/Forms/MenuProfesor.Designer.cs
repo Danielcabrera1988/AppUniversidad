@@ -34,12 +34,13 @@
             this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtBoxBuscador = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.table_Alumno_DBDataGridView = new System.Windows.Forms.DataGridView();
-            this.txtBoxBuscador = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +51,6 @@
             this.fechaNacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_UniversidadBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnReset = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -120,6 +120,34 @@
             this.splitContainer1.SplitterDistance = 138;
             this.splitContainer1.TabIndex = 1;
             // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(59, 208);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 7;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 162);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "NOMBRE O APELLIDO";
+            // 
+            // txtBoxBuscador
+            // 
+            this.txtBoxBuscador.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxBuscador.Location = new System.Drawing.Point(4, 181);
+            this.txtBoxBuscador.Name = "txtBoxBuscador";
+            this.txtBoxBuscador.Size = new System.Drawing.Size(131, 21);
+            this.txtBoxBuscador.TabIndex = 5;
+            // 
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -169,74 +197,65 @@
             this.table_Alumno_DBDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.table_Alumno_DBDataGridView.Location = new System.Drawing.Point(0, 0);
             this.table_Alumno_DBDataGridView.Name = "table_Alumno_DBDataGridView";
+            this.table_Alumno_DBDataGridView.ReadOnly = true;
             this.table_Alumno_DBDataGridView.Size = new System.Drawing.Size(588, 386);
             this.table_Alumno_DBDataGridView.TabIndex = 0;
-            // 
-            // txtBoxBuscador
-            // 
-            this.txtBoxBuscador.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxBuscador.Location = new System.Drawing.Point(4, 181);
-            this.txtBoxBuscador.Name = "txtBoxBuscador";
-            this.txtBoxBuscador.Size = new System.Drawing.Size(131, 21);
-            this.txtBoxBuscador.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 162);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "NOMBRE O APELLIDO";
             // 
             // nombreDataGridViewTextBoxColumn
             // 
             this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
             this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
             this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // apellidoDataGridViewTextBoxColumn
             // 
             this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
             this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
             this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            this.apellidoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // notasDataGridViewTextBoxColumn
             // 
             this.notasDataGridViewTextBoxColumn.DataPropertyName = "Notas";
             this.notasDataGridViewTextBoxColumn.HeaderText = "Notas";
             this.notasDataGridViewTextBoxColumn.Name = "notasDataGridViewTextBoxColumn";
+            this.notasDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // faltasDataGridViewTextBoxColumn
             // 
             this.faltasDataGridViewTextBoxColumn.DataPropertyName = "Faltas";
             this.faltasDataGridViewTextBoxColumn.HeaderText = "Faltas";
             this.faltasDataGridViewTextBoxColumn.Name = "faltasDataGridViewTextBoxColumn";
+            this.faltasDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
             this.emailDataGridViewTextBoxColumn.HeaderText = "email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // telefonoDataGridViewTextBoxColumn
             // 
             this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
             this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
             this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // direccionDataGridViewTextBoxColumn
             // 
             this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
             this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
             this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // fechaNacimientoDataGridViewTextBoxColumn
             // 
             this.fechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "FechaNacimiento";
             this.fechaNacimientoDataGridViewTextBoxColumn.HeaderText = "FechaNacimiento";
             this.fechaNacimientoDataGridViewTextBoxColumn.Name = "fechaNacimientoDataGridViewTextBoxColumn";
+            this.fechaNacimientoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // table_Alumno_DBBindingSource
             // 
@@ -245,16 +264,6 @@
             // dB_UniversidadBindingSource
             // 
             this.dB_UniversidadBindingSource.DataSource = typeof(AppUniversidad.Model.DB_Universidad);
-            // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(59, 208);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 23);
-            this.btnReset.TabIndex = 7;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // MenuProfesor
             // 

@@ -109,6 +109,12 @@
     <Compile Include="Forms\altaMaterias.Designer.cs">
       <DependentUpon>altaMaterias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AsociacionMaterias_Profes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AsociacionMaterias_Profes.Designer.cs">
+      <DependentUpon>AsociacionMaterias_Profes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     <Compile Include="Model\Table_Adm.cs">
       <DependentUpon>DB_Universidad.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Table_Adm_MP.cs">
+      <DependentUpon>DB_Universidad.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Table_Alumno_DB.cs">
       <DependentUpon>DB_Universidad.tt</DependentUpon>
     </Compile>
@@ -200,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\altaMaterias.resx">
       <DependentUpon>altaMaterias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AsociacionMaterias_Profes.resx">
+      <DependentUpon>AsociacionMaterias_Profes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -245,6 +257,7 @@
     <None Include="Properties\DataSources\AppUniversidad.Model.Table_Adm.datasource" />
     <None Include="Properties\DataSources\AppUniversidad.Model.Table_Alumno_DB.datasource" />
     <None Include="Properties\DataSources\AppUniversidad.Model.Table_Materias_DB.datasource" />
+    <None Include="Properties\DataSources\AppUniversidad.Model.Table_Materias_Profe.datasource" />
     <None Include="Properties\DataSources\AppUniversidad.Model.Table_Materia__Alumno.datasource" />
     <None Include="Properties\DataSources\AppUniversidad.Model.Table_Profesor_Alumno.datasource" />
     <None Include="Properties\DataSources\AppUniversidad.Model.Table_Profesor_DB.datasource" />

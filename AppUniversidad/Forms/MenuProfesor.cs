@@ -18,7 +18,8 @@ namespace AppUniversidad.Forms
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            table_Alumno_DBBindingSource.DataSource = dc.Table_Alumno_DB.Where(a => a.Nombre == txtBoxBuscador.Text || a.Apellido == txtBoxBuscador.Text).ToList();
+            table_Alumno_DBBindingSource.DataSource = 
+                dc.Table_Alumno_DB.Where(a => a.Nombre == txtBoxBuscador.Text || a.Apellido == txtBoxBuscador.Text).ToList();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

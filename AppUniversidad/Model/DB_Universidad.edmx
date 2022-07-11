@@ -28,6 +28,14 @@
           <Property Name="Telefono" Type="varchar" MaxLength="50" />
           <Property Name="Direccion" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="Table_Adm_MP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_Materia" Type="int" />
+          <Property Name="id_Profesor" Type="int" />
+        </EntityType>
         <EntityType Name="Table_Alumno_DB">
           <Key>
             <PropertyRef Name="ID" />
@@ -100,7 +108,7 @@
           <Property Name="Direccion" Type="varchar" MaxLength="50" />
           <Property Name="FechaNacimiento" Type="datetime" />
           <Property Name="id_Alumno" Type="int" />
-          <Property Name="id_Materia" Type="nchar" MaxLength="10" />
+          <Property Name="id_Materia" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_Table__Alumno_Materia">
           <End Role="Table_Alumno_DB" Type="Self.Table_Alumno_DB" Multiplicity="0..1" />
@@ -177,6 +185,7 @@
         <EntityContainer Name="DB_Entity_UniversidadModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_Adm" EntityType="Self.Table_Adm" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table_Adm_MP" EntityType="Self.Table_Adm_MP" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_Alumno_DB" EntityType="Self.Table_Alumno_DB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_Materia__Alumno" EntityType="Self.Table_Materia__Alumno" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Table_Materias_DB" EntityType="Self.Table_Materias_DB" Schema="dbo" store:Type="Tables" />
@@ -245,6 +254,7 @@
             <End Role="Table_Profesor_DB" EntitySet="Table_Profesor_DB" />
             <End Role="Table_Materias_Profe" EntitySet="Table_Materias_Profe" />
           </AssociationSet>
+          <EntitySet Name="Table_Adm_MP" EntityType="DB_Entity_UniversidadModel.Table_Adm_MP" />
         </EntityContainer>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -339,7 +349,7 @@
           <Property Name="Direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="FechaNacimiento" Type="DateTime" Precision="3" />
           <Property Name="id_Alumno" Type="Int32" />
-          <Property Name="id_Materia" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="id_Materia" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="Table_Profesor_Alumno" Relationship="DB_Entity_UniversidadModel.FK_Table_Profesor_Alumno_Table_Profesor_DB" FromRole="Table_Profesor_DB" ToRole="Table_Profesor_Alumno" />
           <NavigationProperty Name="Table_Materias_Profe" Relationship="DB_Entity_UniversidadModel.FK_Table_Materias_Profe" FromRole="Table_Profesor_DB" ToRole="Table_Materias_Profe" />
         </EntityType>
@@ -427,6 +437,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Table_Adm_MP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_Materia" Type="Int32" />
+          <Property Name="id_Profesor" Type="Int32" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -532,6 +550,15 @@
               <MappingFragment StoreEntitySet="Table_Materias_Profe">
                 <ScalarProperty Name="Nombre_Profesor" ColumnName="Nombre_Profesor" />
                 <ScalarProperty Name="Nombre_Materia" ColumnName="Nombre_Materia" />
+                <ScalarProperty Name="id_Profesor" ColumnName="id_Profesor" />
+                <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Table_Adm_MP">
+            <EntityTypeMapping TypeName="DB_Entity_UniversidadModel.Table_Adm_MP">
+              <MappingFragment StoreEntitySet="Table_Adm_MP">
                 <ScalarProperty Name="id_Profesor" ColumnName="id_Profesor" />
                 <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />
                 <ScalarProperty Name="ID" ColumnName="ID" />

@@ -23,7 +23,12 @@ namespace AppUniversidad.Forms
         }
         private void asignarMateriasProfes(object sender, EventArgs e)
         {
-            //inner join de profes a materias
+            //inner join de profes y materias
+            AsociacionMaterias_Profes asociacion = new AsociacionMaterias_Profes();
+            asociacion.dc = this.dc;
+            dc.SaveChanges();
+            asociacion.ShowDialog();          
+            table_Materias_DBBindingSource.DataSource = dc.Table_Materias_DB.ToList();
         }
 
         private void altaProfesor_Click(object sender, EventArgs e)
@@ -35,12 +40,12 @@ namespace AppUniversidad.Forms
             newProfe.ShowDialog();
             table_Profesor_DBBindingSource.DataSource = dc.Table_Profesor_DB.ToList();
         }
-
         private void altasAlumnos(object sender, EventArgs e)
         {
             //creacion de alumnos en bd
             altaAlumno altaAlumno = new altaAlumno();
             altaAlumno.dc = this.dc;
+            dc.SaveChanges();
             altaAlumno.ShowDialog();
             table_Alumno_DBBindingSource.DataSource = dc.Table_Alumno_DB.ToList();
         }
@@ -56,7 +61,7 @@ namespace AppUniversidad.Forms
         {
             //elimnacion de profe seleccionado y en bd
             Table_Profesor_DB profeEliminado = (Table_Profesor_DB) table_Profesor_DBBindingSource.Current;
-            if (profeEliminado.Nombre != null)
+            if (profeEliminado != null)
             {
                 dc.Table_Profesor_DB.Remove(profeEliminado);
                 dc.SaveChanges();
@@ -69,7 +74,7 @@ namespace AppUniversidad.Forms
         {
             //eliminacion de alumno seleccionado y en bd
             Table_Alumno_DB alumnoEliminado = (Table_Alumno_DB) table_Alumno_DBBindingSource.Current;
-            if (alumnoEliminado.Nombre != null)
+            if (alumnoEliminado != null)
             {
                 dc.Table_Alumno_DB.Remove(alumnoEliminado);
                 dc.SaveChanges();
@@ -81,7 +86,7 @@ namespace AppUniversidad.Forms
         {
             //eliminacion de materia seleccionada y en bd
             Table_Materias_DB materiaElimiada = (Table_Materias_DB) table_Materias_DBBindingSource.Current;
-            if (materiaElimiada.Nombre != null)
+            if (materiaElimiada != null)
             {
                 dc.Table_Materias_DB.Remove(materiaElimiada);
                 dc.SaveChanges();

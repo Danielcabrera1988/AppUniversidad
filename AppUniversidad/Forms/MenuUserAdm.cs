@@ -61,7 +61,7 @@ namespace AppUniversidad.Forms
         {
             //elimnacion de profe seleccionado y en bd
             Table_Profesor_DB profeEliminado = (Table_Profesor_DB) table_Profesor_DBBindingSource.Current;
-            if (profeEliminado != null)
+            if (profeEliminado.Nombre != null)
             {
                 dc.Table_Profesor_DB.Remove(profeEliminado);
                 dc.SaveChanges();
@@ -74,7 +74,7 @@ namespace AppUniversidad.Forms
         {
             //eliminacion de alumno seleccionado y en bd
             Table_Alumno_DB alumnoEliminado = (Table_Alumno_DB) table_Alumno_DBBindingSource.Current;
-            if (alumnoEliminado != null)
+            if (alumnoEliminado.Nombre != null)
             {
                 dc.Table_Alumno_DB.Remove(alumnoEliminado);
                 dc.SaveChanges();
@@ -86,7 +86,7 @@ namespace AppUniversidad.Forms
         {
             //eliminacion de materia seleccionada y en bd
             Table_Materias_DB materiaElimiada = (Table_Materias_DB) table_Materias_DBBindingSource.Current;
-            if (materiaElimiada != null)
+            if (materiaElimiada.Nombre != null)
             {
                 dc.Table_Materias_DB.Remove(materiaElimiada);
                 dc.SaveChanges();

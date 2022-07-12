@@ -1,5 +1,6 @@
 ﻿using AppUniversidad.Model;
 using System;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
@@ -8,10 +9,12 @@ namespace AppUniversidad.Forms
 {
     public partial class MenuUserAdm : Form
     {
+        private SqlConnection connection = new SqlConnection(@"server = DANIEL\SQLEXPRESS; database = DB_Entity_Universidad; INTEGRATED SECURITY = true;");
         public DB_Universidad dc = new DB_Universidad();
         public Table_Profesor_DB profe { get; set; }
         public Table_Alumno_DB alumno { get; set; }
         public Table_Materias_DB materia { get; set; }
+        internal string nameLoging;
         public MenuUserAdm()
         {
             InitializeComponent();
@@ -94,8 +97,21 @@ namespace AppUniversidad.Forms
             }
             else MessageBox.Show("Debe seleccionar una Materia", "Error de Selección");
         }
+        private void nameUser (string name)
+        {
+            connection.Open();
+            //string cadena = "select descripcion, precio from articulos where codigo=" + cod;
+            string sql = "SELECT Nombre FROM Table_Adm where Usuario like '"+name+"'";          
+            SqlCommand cmd = new SqlCommand(sql,connection);
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                lblNombreAdmin.Text = reader["Nombre"].ToString();
+            }
+        }
         private void MenuUserAdm_Load(object sender, EventArgs e)
         {
+            nameUser(nameLoging);
             //carga todos los alumnos, profes y materias de la bd en cada una de sus columnas
             table_Materias_DBBindingSource.DataSource = dc.Table_Materias_DB.ToList();
             table_Profesor_DBBindingSource.DataSource = dc.Table_Profesor_DB.ToList();
@@ -126,7 +142,7 @@ namespace AppUniversidad.Forms
                     writer.WriteLine("Tabla de Materias");
                     foreach (DataGridViewRow data in table_Materias_DBDataGridView.Rows)
                     {
-                        //Formato ==> Alumno: Fulano Merengue Nota: ? Faltas: ?
+                        //Formato ==> Materia: Laboratorio...
                         writer.WriteLine("Materia: " + data.Cells[0].Value);
                     }
                 }

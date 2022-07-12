@@ -74,8 +74,8 @@ namespace AppUniversidad
             if (reader.Read())
             {
                 MenuUserAdm menuAdm = new MenuUserAdm();
+                menuAdm.nameLoging = txtBoxUser.Text;
                 menuAdm.Show();
-                connection.Close();
                 txtBoxUser.Text = "";
                 txtBoxPass.Text = "";
                 return;
@@ -105,7 +105,6 @@ namespace AppUniversidad
             {
                 MenuProfesor menuProfesor = new MenuProfesor();
                 menuProfesor.Show();
-                connection.Close();
                 txtBoxUser.Text = "";
                 txtBoxPass.Text = "";
                 return;

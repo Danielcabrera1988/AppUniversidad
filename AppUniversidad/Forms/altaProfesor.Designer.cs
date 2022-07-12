@@ -175,7 +175,7 @@
             this.apellidoTextBox.Location = new System.Drawing.Point(253, 38);
             this.apellidoTextBox.Name = "apellidoTextBox";
             this.apellidoTextBox.Size = new System.Drawing.Size(200, 20);
-            this.apellidoTextBox.TabIndex = 23;
+            this.apellidoTextBox.TabIndex = 2;
             // 
             // direccionTextBox
             // 
@@ -183,7 +183,7 @@
             this.direccionTextBox.Location = new System.Drawing.Point(253, 98);
             this.direccionTextBox.Name = "direccionTextBox";
             this.direccionTextBox.Size = new System.Drawing.Size(200, 20);
-            this.direccionTextBox.TabIndex = 25;
+            this.direccionTextBox.TabIndex = 4;
             // 
             // emailTextBox
             // 
@@ -191,7 +191,7 @@
             this.emailTextBox.Location = new System.Drawing.Point(253, 124);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(200, 20);
-            this.emailTextBox.TabIndex = 27;
+            this.emailTextBox.TabIndex = 5;
             // 
             // fechaNacimientoDateTimePicker
             // 
@@ -199,7 +199,7 @@
             this.fechaNacimientoDateTimePicker.Location = new System.Drawing.Point(253, 64);
             this.fechaNacimientoDateTimePicker.Name = "fechaNacimientoDateTimePicker";
             this.fechaNacimientoDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.fechaNacimientoDateTimePicker.TabIndex = 29;
+            this.fechaNacimientoDateTimePicker.TabIndex = 3;
             // 
             // nombreTextBox
             // 
@@ -207,7 +207,7 @@
             this.nombreTextBox.Location = new System.Drawing.Point(253, 12);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(200, 20);
-            this.nombreTextBox.TabIndex = 37;
+            this.nombreTextBox.TabIndex = 1;
             // 
             // pswdTextBox
             // 
@@ -215,7 +215,7 @@
             this.pswdTextBox.Location = new System.Drawing.Point(253, 176);
             this.pswdTextBox.Name = "pswdTextBox";
             this.pswdTextBox.Size = new System.Drawing.Size(200, 20);
-            this.pswdTextBox.TabIndex = 39;
+            this.pswdTextBox.TabIndex = 7;
             // 
             // telefonoTextBox
             // 
@@ -223,7 +223,7 @@
             this.telefonoTextBox.Location = new System.Drawing.Point(253, 150);
             this.telefonoTextBox.Name = "telefonoTextBox";
             this.telefonoTextBox.Size = new System.Drawing.Size(200, 20);
-            this.telefonoTextBox.TabIndex = 41;
+            this.telefonoTextBox.TabIndex = 6;
             // 
             // usuarioTextBox
             // 
@@ -231,7 +231,7 @@
             this.usuarioTextBox.Location = new System.Drawing.Point(253, 202);
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(200, 20);
-            this.usuarioTextBox.TabIndex = 43;
+            this.usuarioTextBox.TabIndex = 8;
             // 
             // altaProfesor
             // 

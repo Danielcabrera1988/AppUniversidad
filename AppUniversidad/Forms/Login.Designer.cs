@@ -62,6 +62,8 @@
             // 
             // txtBoxUser
             // 
+            this.txtBoxUser.AcceptsReturn = true;
+            this.txtBoxUser.AcceptsTab = true;
             this.txtBoxUser.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtBoxUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxUser.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -75,6 +77,8 @@
             // 
             // txtBoxPass
             // 
+            this.txtBoxPass.AcceptsReturn = true;
+            this.txtBoxPass.AcceptsTab = true;
             this.txtBoxPass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxPass.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtBoxPass.Location = new System.Drawing.Point(163, 101);
@@ -157,8 +161,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Login";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Universidad";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

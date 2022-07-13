@@ -65,7 +65,7 @@ namespace AppUniversidad
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            connection.Open();
+            
             //Consulta para los ADM
             SqlCommand cmadm = new SqlCommand("SELECT USUARIO, PSWD FROM Table_Adm WHERE Usuario = @vusuario AND Pswd = @vpswd",connection);
             cmadm.Parameters.AddWithValue("@vusuario",txtBoxUser.Text);
@@ -73,6 +73,7 @@ namespace AppUniversidad
             SqlDataReader reader = cmadm.ExecuteReader();
             if (reader.Read())
             {
+                reader.Close();
                 MenuUserAdm menuAdm = new MenuUserAdm();
                 menuAdm.nameLoging = txtBoxUser.Text;
                 menuAdm.Show();
@@ -81,6 +82,7 @@ namespace AppUniversidad
                 return;
             }
             reader.Close();
+
             //Consulta para los Alumnos
             SqlCommand cmalumno = new SqlCommand("SELECT USUARIO, PSWD FROM Table_Alumno_DB WHERE Usuario = @vusuario AND Pswd = @vpswd", connection);
             cmalumno.Parameters.AddWithValue("@vusuario", txtBoxUser.Text);
@@ -88,6 +90,7 @@ namespace AppUniversidad
             reader = cmalumno.ExecuteReader();
             if (reader.Read())
             {
+                reader.Close();
                 MenuAlumnos menuAlumnos = new MenuAlumnos();
                 menuAlumnos.Show();
                 connection.Close();
@@ -96,6 +99,7 @@ namespace AppUniversidad
                 return;
             }
             reader.Close();
+
             //Consulta para los Profesores
             SqlCommand cmprofe = new SqlCommand("SELECT USUARIO, PSWD FROM Table_Profesor_DB WHERE Usuario = @vusuario AND Pswd = @vpswd", connection);
             cmprofe.Parameters.AddWithValue("@vusuario", txtBoxUser.Text);
@@ -103,6 +107,7 @@ namespace AppUniversidad
             reader = cmprofe.ExecuteReader();
             if (reader.Read())
             {
+                reader.Close();
                 MenuProfesor menuProfesor = new MenuProfesor();
                 menuProfesor.Show();
                 txtBoxUser.Text = "";
@@ -111,7 +116,8 @@ namespace AppUniversidad
             }
             else MessageBox.Show("Usuario o Contraseña invalidos", "DATOS INCORRECTOS");
             reader.Close();
-            connection.Close();
+
+            //connection.Close();
             txtBoxUser.Text = "";
             txtBoxPass.Text = "";
         }
@@ -125,6 +131,11 @@ namespace AppUniversidad
             stream = md5.ComputeHash(encoding.GetBytes(str));
             for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
             return sb.ToString();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            connection.Open();
         }
     }
 }

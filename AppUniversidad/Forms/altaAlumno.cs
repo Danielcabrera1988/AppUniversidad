@@ -26,7 +26,7 @@ namespace AppUniversidad.Forms
             newAlumno.Pswd = GetMD5(pswdTextBox.Text);
             dc.Table_Alumno_DB.Add(newAlumno);
             dc.SaveChanges();
-            table_Alumno_DBBindingSource.DataSource = dc.Table_Profesor_DB.ToList();
+            table_Alumno_DBBindingSource.DataSource = dc.Table_Alumno_DB.ToList();
             this.Close();
         }
         public static string GetMD5(string str)
@@ -39,13 +39,13 @@ namespace AppUniversidad.Forms
             for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
             return sb.ToString();
         }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
         private void altaAlumno_Load(object sender, EventArgs e)
         {
-            if (newAlumno == null)
-            {
-                newAlumno = new Table_Alumno_DB();
-            }
             table_Alumno_DBBindingSource.DataSource = newAlumno;
         }
     }

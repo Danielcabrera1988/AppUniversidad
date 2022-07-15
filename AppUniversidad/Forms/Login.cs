@@ -12,8 +12,17 @@ namespace AppUniversidad
     public partial class Login : Form
     {
         public DB_Universidad dc = new DB_Universidad();
+        public Table_Carreras carreras_DB = new Table_Carreras();
+        public Table_Profesor_DB profesor_DB = new Table_Profesor_DB();
+        public Table_Materias_DB materias_DB = new Table_Materias_DB();
+        public Table_Alumno_DB alumno_DB = new Table_Alumno_DB();
+        public Table_Carrera_Alumno Carrera_Alumno = new Table_Carrera_Alumno();
+        public Table_Carrera_Materia Carrera_Materia = new Table_Carrera_Materia();
+        public Table_Materias_Profe Materias_Profe = new Table_Materias_Profe();
+        public Table_Materia__Alumno materia__Alumno = new Table_Materia__Alumno();
+        public Table_Profesor_Alumno Profesor_Alumno = new Table_Profesor_Alumno();
 
-        private SqlConnection connection = new SqlConnection(@"server = DANIEL\SQLEXPRESS; database = DB_Entity_Universidad; INTEGRATED SECURITY = true;");
+        internal SqlConnection connection = new SqlConnection(@"server = DANIEL\SQLEXPRESS; database = DB_Entity_Universidad; INTEGRATED SECURITY = true;");
         public Login()
         {
             InitializeComponent();
@@ -65,7 +74,7 @@ namespace AppUniversidad
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            
+            //connection.Open();
             //Consulta para los ADM
             SqlCommand cmadm = new SqlCommand("SELECT USUARIO, PSWD FROM Table_Adm WHERE Usuario = @vusuario AND Pswd = @vpswd",connection);
             cmadm.Parameters.AddWithValue("@vusuario",txtBoxUser.Text);
@@ -76,6 +85,12 @@ namespace AppUniversidad
                 reader.Close();
                 MenuUserAdm menuAdm = new MenuUserAdm();
                 menuAdm.nameLoging = txtBoxUser.Text;
+                menuAdm.profe = this.profesor_DB;
+                menuAdm.carreras = this.carreras_DB;
+                menuAdm.alumno = this.alumno_DB;
+                menuAdm.materia = this.materias_DB;
+                menuAdm.Materias_Profe = this.Materias_Profe;
+                menuAdm.dc = this.dc;
                 menuAdm.Show();
                 txtBoxUser.Text = "";
                 txtBoxPass.Text = "";
@@ -92,8 +107,10 @@ namespace AppUniversidad
             {
                 reader.Close();
                 MenuAlumnos menuAlumnos = new MenuAlumnos();
+                menuAlumnos.dc = this.dc;
+                menuAlumnos.alumno = this.alumno_DB;
+                menuAlumnos.nameAlumno = txtBoxUser.Text;
                 menuAlumnos.Show();
-                connection.Close();
                 txtBoxUser.Text = "";
                 txtBoxPass.Text = "";
                 return;
@@ -109,6 +126,7 @@ namespace AppUniversidad
             {
                 reader.Close();
                 MenuProfesor menuProfesor = new MenuProfesor();
+                menuProfesor.dc = this.dc;  
                 menuProfesor.Show();
                 txtBoxUser.Text = "";
                 txtBoxPass.Text = "";

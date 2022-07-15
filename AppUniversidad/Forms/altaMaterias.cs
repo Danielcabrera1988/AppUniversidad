@@ -35,10 +35,6 @@ namespace AppUniversidad.Forms
 
         private void altaMaterias_Load(object sender, EventArgs e)
         {
-            if (materia == null)
-            {
-                materia = new Table_Materias_DB();
-            }
             table_Materias_DBBindingSource.DataSource = materia;
         }
     }

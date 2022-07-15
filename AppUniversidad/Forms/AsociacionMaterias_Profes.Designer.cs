@@ -37,42 +37,42 @@
             this.btnAsignar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.table_Profesor_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.table_Materias_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.table_Materias_ProfeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.table_Materias_DBDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.table_Materias_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
             this.table_Profesor_DBDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_Materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.table_Profesor_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.table_Materias_ProfeDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.table_Materias_ProfeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Materias_DBBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Materias_ProfeBindingSource)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table_Materias_DBDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Materias_DBBindingSource)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBBindingSource)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table_Materias_ProfeDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Materias_ProfeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -184,18 +184,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(716, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // table_Profesor_DBBindingSource
-            // 
-            this.table_Profesor_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Profesor_DB);
-            // 
-            // table_Materias_DBBindingSource
-            // 
-            this.table_Materias_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materias_DB);
-            // 
-            // table_Materias_ProfeBindingSource
-            // 
-            this.table_Materias_ProfeBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materias_Profe);
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -222,7 +210,6 @@
             this.dataGridViewTextBoxColumn2});
             this.table_Materias_DBDataGridView.DataSource = this.table_Materias_DBBindingSource;
             this.table_Materias_DBDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.table_Materias_DBDataGridView.Enabled = false;
             this.table_Materias_DBDataGridView.Location = new System.Drawing.Point(3, 34);
             this.table_Materias_DBDataGridView.Name = "table_Materias_DBDataGridView";
             this.table_Materias_DBDataGridView.ReadOnly = true;
@@ -252,6 +239,22 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
+            // table_Materias_DBBindingSource
+            // 
+            this.table_Materias_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materias_DB);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(226, 31);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "MATERIAS";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
@@ -267,6 +270,18 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(232, 444);
             this.tableLayoutPanel3.TabIndex = 8;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(226, 31);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "PROFESORES";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // table_Profesor_DBDataGridView
             // 
             this.table_Profesor_DBDataGridView.AutoGenerateColumns = false;
@@ -278,7 +293,6 @@
             this.dataGridViewTextBoxColumn12});
             this.table_Profesor_DBDataGridView.DataSource = this.table_Profesor_DBBindingSource;
             this.table_Profesor_DBDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.table_Profesor_DBDataGridView.Enabled = false;
             this.table_Profesor_DBDataGridView.Location = new System.Drawing.Point(3, 34);
             this.table_Profesor_DBDataGridView.Name = "table_Profesor_DBDataGridView";
             this.table_Profesor_DBDataGridView.ReadOnly = true;
@@ -308,6 +322,10 @@
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
             // 
+            // table_Profesor_DBBindingSource
+            // 
+            this.table_Profesor_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Profesor_DB);
+            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
@@ -335,7 +353,6 @@
             this.dataGridViewTextBoxColumn9});
             this.table_Materias_ProfeDataGridView.DataSource = this.table_Materias_ProfeBindingSource;
             this.table_Materias_ProfeDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.table_Materias_ProfeDataGridView.Enabled = false;
             this.table_Materias_ProfeDataGridView.Location = new System.Drawing.Point(3, 34);
             this.table_Materias_ProfeDataGridView.Name = "table_Materias_ProfeDataGridView";
             this.table_Materias_ProfeDataGridView.ReadOnly = true;
@@ -372,29 +389,9 @@
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
-            // label3
+            // table_Materias_ProfeBindingSource
             // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(226, 31);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "MATERIAS";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(226, 31);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "PROFESORES";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.table_Materias_ProfeBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Materias_Profe);
             // 
             // label5
             // 
@@ -424,18 +421,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Materias_DBBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.table_Materias_ProfeBindingSource)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table_Materias_DBDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Materias_DBBindingSource)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Profesor_DBBindingSource)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table_Materias_ProfeDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table_Materias_ProfeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

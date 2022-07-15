@@ -28,6 +28,7 @@ namespace AppUniversidad.Forms
                 alumno.Faltas = falta;
                 alumno.Notas = nota;
                 this.Close();
+                dc.SaveChanges();
                 table_Alumno_DBBindingSource.DataSource = dc.Table_Alumno_DB.ToList();
             }
             else MessageBox.Show("Valores ingresados incorrectos", "ALERTA");

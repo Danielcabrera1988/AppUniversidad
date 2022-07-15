@@ -10,10 +10,13 @@ namespace AppUniversidad.Forms
     public partial class MenuUserAdm : Form
     {
         private SqlConnection connection = new SqlConnection(@"server = DANIEL\SQLEXPRESS; database = DB_Entity_Universidad; INTEGRATED SECURITY = true;");
-        public DB_Universidad dc = new DB_Universidad();
+        public DB_Universidad dc { get; set; }
+        public Table_Carreras carreras { get; set; }
         public Table_Profesor_DB profe { get; set; }
         public Table_Alumno_DB alumno { get; set; }
         public Table_Materias_DB materia { get; set; }
+        public Table_Materias_Profe Materias_Profe { get; set; }
+
         internal string nameLoging;
         public MenuUserAdm()
         {
@@ -28,6 +31,9 @@ namespace AppUniversidad.Forms
         {
             //inner join de profes y materias
             AsociacionMaterias_Profes asociacion = new AsociacionMaterias_Profes();
+            asociacion.materia = this.materia;
+            asociacion.profe = this.profe;
+            asociacion.table_Materias_Profe = this.Materias_Profe;
             asociacion.dc = this.dc;
             dc.SaveChanges();
             asociacion.ShowDialog();          
@@ -38,6 +44,7 @@ namespace AppUniversidad.Forms
         {
             //crecion de profe en bd
             altaProfesor newProfe = new altaProfesor();
+            newProfe.newProfe = this.profe;
             newProfe.dc = this.dc;
             dc.SaveChanges();
             newProfe.ShowDialog();
@@ -47,6 +54,7 @@ namespace AppUniversidad.Forms
         {
             //creacion de alumnos en bd
             altaAlumno altaAlumno = new altaAlumno();
+            altaAlumno.newAlumno = this.alumno;
             altaAlumno.dc = this.dc;
             dc.SaveChanges();
             altaAlumno.ShowDialog();
@@ -55,6 +63,7 @@ namespace AppUniversidad.Forms
         private void altaMateria(object sender, EventArgs e)
         {
             altaMaterias alta = new altaMaterias();
+            alta.materia = this.materia;
             alta.dc = this.dc;
             dc.SaveChanges();
             alta.ShowDialog();
@@ -63,10 +72,10 @@ namespace AppUniversidad.Forms
         private void bajasProfesor(object sender, EventArgs e)
         {
             //elimnacion de profe seleccionado y en bd
-            Table_Profesor_DB profeEliminado = (Table_Profesor_DB) table_Profesor_DBBindingSource.Current;
-            if (profeEliminado.Nombre != null)
+            profe = (Table_Profesor_DB) table_Profesor_DBBindingSource.Current;
+            if (profe.Nombre != null)
             {
-                dc.Table_Profesor_DB.Remove(profeEliminado);
+                dc.Table_Profesor_DB.Remove(profe);
                 dc.SaveChanges();
                 table_Profesor_DBBindingSource.DataSource = dc.Table_Profesor_DB.ToList();
             }
@@ -76,10 +85,10 @@ namespace AppUniversidad.Forms
         private void bajasAlumno(object sender, EventArgs e)
         {
             //eliminacion de alumno seleccionado y en bd
-            Table_Alumno_DB alumnoEliminado = (Table_Alumno_DB) table_Alumno_DBBindingSource.Current;
-            if (alumnoEliminado.Nombre != null)
+            alumno = (Table_Alumno_DB) table_Alumno_DBBindingSource.Current;
+            if (alumno.Nombre != null)
             {
-                dc.Table_Alumno_DB.Remove(alumnoEliminado);
+                dc.Table_Alumno_DB.Remove(alumno);
                 dc.SaveChanges();
                 table_Alumno_DBBindingSource.DataSource = dc.Table_Alumno_DB.ToList();
             }
@@ -88,10 +97,10 @@ namespace AppUniversidad.Forms
         private void bajaMaterias_Click(object sender, EventArgs e)
         {
             //eliminacion de materia seleccionada y en bd
-            Table_Materias_DB materiaElimiada = (Table_Materias_DB) table_Materias_DBBindingSource.Current;
-            if (materiaElimiada.Nombre != null)
+            materia = (Table_Materias_DB) table_Materias_DBBindingSource.Current;
+            if (materia.Nombre != null)
             {
-                dc.Table_Materias_DB.Remove(materiaElimiada);
+                dc.Table_Materias_DB.Remove(materia);
                 dc.SaveChanges();
                 table_Materias_DBBindingSource.DataSource = dc.Table_Materias_DB.ToList();
             }
@@ -112,7 +121,8 @@ namespace AppUniversidad.Forms
         private void MenuUserAdm_Load(object sender, EventArgs e)
         {
             nameUser(nameLoging);
-            //carga todos los alumnos, profes y materias de la bd en cada una de sus columnas
+            //carga todos las carreras, alumnos, profes y materias de la bd en cada una de sus columnas
+            table_CarrerasBindingSource.DataSource = dc.Table_Carreras.ToList();
             table_Materias_DBBindingSource.DataSource = dc.Table_Materias_DB.ToList();
             table_Profesor_DBBindingSource.DataSource = dc.Table_Profesor_DB.ToList();
             table_Alumno_DBBindingSource.DataSource = dc.Table_Alumno_DB.ToList();

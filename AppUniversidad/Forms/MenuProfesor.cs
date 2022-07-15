@@ -9,7 +9,7 @@ namespace AppUniversidad.Forms
 {
     public partial class MenuProfesor : Form
     {
-        public DB_Universidad dc = new DB_Universidad();
+        public DB_Universidad dc { get; set; }
         public Table_Alumno_DB alumno { get; set; }
         public MenuProfesor()
         {

@@ -19,16 +19,20 @@ namespace AppUniversidad.Model
         {
             this.Table_Materia__Alumno = new HashSet<Table_Materia__Alumno>();
             this.Table_Materias_Profe = new HashSet<Table_Materias_Profe>();
+            this.Table_Carrera_Materia = new HashSet<Table_Carrera_Materia>();
         }
     
         public int ID { get; set; }
         public string Nombre { get; set; }
         public Nullable<int> id_Alumno { get; set; }
         public Nullable<int> id_Profesor { get; set; }
+        public Nullable<int> id_Carrera { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Table_Materia__Alumno> Table_Materia__Alumno { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Table_Materias_Profe> Table_Materias_Profe { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Table_Carrera_Materia> Table_Carrera_Materia { get; set; }
     }
 }

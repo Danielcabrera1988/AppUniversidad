@@ -24,7 +24,7 @@ namespace AppUniversidad.Forms
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             newProfe.Pswd = GetMD5(pswdTextBox.Text);
-            dc.Table_Profesor_DB.Add(newProfe);
+            dc.Table_Profesor_DB.Add(newProfe);            
             dc.SaveChanges();
             table_Profesor_DBBindingSource.DataSource = dc.Table_Profesor_DB.ToList();
             this.Close();
@@ -48,10 +48,6 @@ namespace AppUniversidad.Forms
 
         private void altaProfesor_Load(object sender, EventArgs e)
         {
-            if (newProfe == null)
-            {
-                newProfe = new Table_Profesor_DB();
-            }
             table_Profesor_DBBindingSource.DataSource = newProfe;
         }
     }

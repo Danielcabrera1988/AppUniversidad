@@ -38,6 +38,7 @@
             System.Windows.Forms.Label telefonoLabel;
             System.Windows.Forms.Label usuarioLabel;
             this.apellidoTextBox = new System.Windows.Forms.TextBox();
+            this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.fechaNacimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -45,7 +46,6 @@
             this.pswdTextBox = new System.Windows.Forms.TextBox();
             this.telefonoTextBox = new System.Windows.Forms.TextBox();
             this.usuarioTextBox = new System.Windows.Forms.TextBox();
-            this.table_Alumno_DBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -71,15 +71,6 @@
             apellidoLabel.TabIndex = 1;
             apellidoLabel.Text = "Apellido:";
             // 
-            // apellidoTextBox
-            // 
-            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Apellido", true));
-            this.apellidoTextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apellidoTextBox.Location = new System.Drawing.Point(312, 38);
-            this.apellidoTextBox.Name = "apellidoTextBox";
-            this.apellidoTextBox.Size = new System.Drawing.Size(200, 21);
-            this.apellidoTextBox.TabIndex = 2;
-            // 
             // direccionLabel
             // 
             direccionLabel.AutoSize = true;
@@ -89,15 +80,6 @@
             direccionLabel.Size = new System.Drawing.Size(60, 16);
             direccionLabel.TabIndex = 3;
             direccionLabel.Text = "Direccion:";
-            // 
-            // direccionTextBox
-            // 
-            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Direccion", true));
-            this.direccionTextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.direccionTextBox.Location = new System.Drawing.Point(312, 64);
-            this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(200, 21);
-            this.direccionTextBox.TabIndex = 3;
             // 
             // emailLabel
             // 
@@ -109,15 +91,6 @@
             emailLabel.TabIndex = 5;
             emailLabel.Text = "email:";
             // 
-            // emailTextBox
-            // 
-            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "email", true));
-            this.emailTextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailTextBox.Location = new System.Drawing.Point(312, 90);
-            this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(200, 21);
-            this.emailTextBox.TabIndex = 4;
-            // 
             // fechaNacimientoLabel
             // 
             fechaNacimientoLabel.AutoSize = true;
@@ -127,15 +100,6 @@
             fechaNacimientoLabel.Size = new System.Drawing.Size(109, 16);
             fechaNacimientoLabel.TabIndex = 9;
             fechaNacimientoLabel.Text = "Fecha Nacimiento:";
-            // 
-            // fechaNacimientoDateTimePicker
-            // 
-            this.fechaNacimientoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.table_Alumno_DBBindingSource, "FechaNacimiento", true));
-            this.fechaNacimientoDateTimePicker.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechaNacimientoDateTimePicker.Location = new System.Drawing.Point(312, 142);
-            this.fechaNacimientoDateTimePicker.Name = "fechaNacimientoDateTimePicker";
-            this.fechaNacimientoDateTimePicker.Size = new System.Drawing.Size(200, 21);
-            this.fechaNacimientoDateTimePicker.TabIndex = 6;
             // 
             // nombreLabel
             // 
@@ -147,15 +111,6 @@
             nombreLabel.TabIndex = 17;
             nombreLabel.Text = "Nombre:";
             // 
-            // nombreTextBox
-            // 
-            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Nombre", true));
-            this.nombreTextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombreTextBox.Location = new System.Drawing.Point(312, 12);
-            this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(200, 21);
-            this.nombreTextBox.TabIndex = 1;
-            // 
             // pswdLabel
             // 
             pswdLabel.AutoSize = true;
@@ -165,15 +120,6 @@
             pswdLabel.Size = new System.Drawing.Size(39, 16);
             pswdLabel.TabIndex = 21;
             pswdLabel.Text = "Pswd:";
-            // 
-            // pswdTextBox
-            // 
-            this.pswdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Pswd", true));
-            this.pswdTextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pswdTextBox.Location = new System.Drawing.Point(312, 194);
-            this.pswdTextBox.Name = "pswdTextBox";
-            this.pswdTextBox.Size = new System.Drawing.Size(200, 21);
-            this.pswdTextBox.TabIndex = 8;
             // 
             // telefonoLabel
             // 
@@ -185,15 +131,6 @@
             telefonoLabel.TabIndex = 23;
             telefonoLabel.Text = "Telefono:";
             // 
-            // telefonoTextBox
-            // 
-            this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Telefono", true));
-            this.telefonoTextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telefonoTextBox.Location = new System.Drawing.Point(312, 116);
-            this.telefonoTextBox.Name = "telefonoTextBox";
-            this.telefonoTextBox.Size = new System.Drawing.Size(200, 21);
-            this.telefonoTextBox.TabIndex = 5;
-            // 
             // usuarioLabel
             // 
             usuarioLabel.AutoSize = true;
@@ -204,6 +141,73 @@
             usuarioLabel.TabIndex = 25;
             usuarioLabel.Text = "Usuario:";
             // 
+            // apellidoTextBox
+            // 
+            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Apellido", true));
+            this.apellidoTextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apellidoTextBox.Location = new System.Drawing.Point(312, 38);
+            this.apellidoTextBox.Name = "apellidoTextBox";
+            this.apellidoTextBox.Size = new System.Drawing.Size(200, 21);
+            this.apellidoTextBox.TabIndex = 2;
+            // 
+            // table_Alumno_DBBindingSource
+            // 
+            this.table_Alumno_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Alumno_DB);
+            // 
+            // direccionTextBox
+            // 
+            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Direccion", true));
+            this.direccionTextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.direccionTextBox.Location = new System.Drawing.Point(312, 64);
+            this.direccionTextBox.Name = "direccionTextBox";
+            this.direccionTextBox.Size = new System.Drawing.Size(200, 21);
+            this.direccionTextBox.TabIndex = 3;
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "email", true));
+            this.emailTextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailTextBox.Location = new System.Drawing.Point(312, 90);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(200, 21);
+            this.emailTextBox.TabIndex = 4;
+            // 
+            // fechaNacimientoDateTimePicker
+            // 
+            this.fechaNacimientoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.table_Alumno_DBBindingSource, "FechaNacimiento", true));
+            this.fechaNacimientoDateTimePicker.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechaNacimientoDateTimePicker.Location = new System.Drawing.Point(312, 142);
+            this.fechaNacimientoDateTimePicker.Name = "fechaNacimientoDateTimePicker";
+            this.fechaNacimientoDateTimePicker.Size = new System.Drawing.Size(200, 21);
+            this.fechaNacimientoDateTimePicker.TabIndex = 6;
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Nombre", true));
+            this.nombreTextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreTextBox.Location = new System.Drawing.Point(312, 12);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(200, 21);
+            this.nombreTextBox.TabIndex = 1;
+            // 
+            // pswdTextBox
+            // 
+            this.pswdTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Pswd", true));
+            this.pswdTextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pswdTextBox.Location = new System.Drawing.Point(312, 194);
+            this.pswdTextBox.Name = "pswdTextBox";
+            this.pswdTextBox.Size = new System.Drawing.Size(200, 21);
+            this.pswdTextBox.TabIndex = 8;
+            // 
+            // telefonoTextBox
+            // 
+            this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Telefono", true));
+            this.telefonoTextBox.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.telefonoTextBox.Location = new System.Drawing.Point(312, 116);
+            this.telefonoTextBox.Name = "telefonoTextBox";
+            this.telefonoTextBox.Size = new System.Drawing.Size(200, 21);
+            this.telefonoTextBox.TabIndex = 5;
+            // 
             // usuarioTextBox
             // 
             this.usuarioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.table_Alumno_DBBindingSource, "Usuario", true));
@@ -212,10 +216,6 @@
             this.usuarioTextBox.Name = "usuarioTextBox";
             this.usuarioTextBox.Size = new System.Drawing.Size(200, 21);
             this.usuarioTextBox.TabIndex = 7;
-            // 
-            // table_Alumno_DBBindingSource
-            // 
-            this.table_Alumno_DBBindingSource.DataSource = typeof(AppUniversidad.Model.Table_Alumno_DB);
             // 
             // pictureBox1
             // 
@@ -247,6 +247,7 @@
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // altaAlumno
             // 

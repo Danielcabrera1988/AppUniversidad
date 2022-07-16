@@ -16,7 +16,7 @@ namespace AppUniversidad.Forms
     {
         public DB_Universidad dc { get; set; }
         public Table_Alumno_DB alumno { get; set; }
-
+        public Table_Carreras carreras { get; set; }
         public Table_Carrera_Alumno Carrera_Alumno { get; set; }
         public InscripcionesCarreras()
         {
@@ -31,12 +31,11 @@ namespace AppUniversidad.Forms
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             alumno.id_Carrera = (int)table_CarrerasDataGridView.CurrentRow.Cells[0].Value;
+            carreras.id_Alumno = alumno.ID;
             Carrera_Alumno.id_Alumno = alumno.ID;
             Carrera_Alumno.id_Carrera = (int)table_CarrerasDataGridView.CurrentRow.Cells[0].Value;
             dc.Table_Carrera_Alumno.Add(Carrera_Alumno);
-            dc.SaveChanges();
-            MessageBox.Show("Inscripcion a la carrera correctamente", "Inscrpcion");
-            
+            dc.SaveChanges();            
             this.Close();
         }
 

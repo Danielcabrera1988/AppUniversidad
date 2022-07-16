@@ -109,6 +109,10 @@ namespace AppUniversidad
                 MenuAlumnos menuAlumnos = new MenuAlumnos();
                 menuAlumnos.dc = this.dc;
                 menuAlumnos.alumno = this.alumno_DB;
+                menuAlumnos.materias = this.materias_DB;
+                menuAlumnos.materiaAlumno = this.materia__Alumno;
+                menuAlumnos.carreras = this.carreras_DB;
+                menuAlumnos.Carrera_Alumno = this.Carrera_Alumno;
                 menuAlumnos.nameAlumno = txtBoxUser.Text;
                 menuAlumnos.Show();
                 txtBoxUser.Text = "";

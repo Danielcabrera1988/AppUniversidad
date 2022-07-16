@@ -26,6 +26,7 @@ namespace AppUniversidad.Model
         public Nullable<int> id_Materia { get; set; }
         public string Materia { get; set; }
         public string Carrera { get; set; }
+        public Nullable<int> id_Alumno { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Table_Carrera_Materia> Table_Carrera_Materia { get; set; }

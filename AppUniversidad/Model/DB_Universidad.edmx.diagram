@@ -5,11 +5,11 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="36ad683ce58a4b51b08d8685973c4b7b" Name="Diagram1" ZoomLevel="63">
-        <EntityTypeShape EntityType="DB_Entity_UniversidadModel.sysdiagrams" Width="1.5" PointX="12.5" PointY="4.25" />
-        <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Adm" Width="1.5" PointX="12.5" PointY="6.5" />
+        <EntityTypeShape EntityType="DB_Entity_UniversidadModel.sysdiagrams" Width="1.5" PointX="9.25" PointY="0.5" />
+        <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Adm" Width="1.5" PointX="9.25" PointY="2.75" />
         <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Alumno_DB" Width="1.5" PointX="0.625" PointY="0.5" />
-        <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Materia__Alumno" Width="1.5" PointX="2.875" PointY="2.75" />
-        <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Materias_DB" Width="1.5" PointX="5.125" PointY="2.75" />
+        <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Materia__Alumno" Width="1.5" PointX="2.875" PointY="3" />
+        <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Materias_DB" Width="1.5" PointX="5.125" PointY="3" />
         <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Profesor_Alumno" Width="1.5" PointX="0.625" PointY="7.125" />
         <EntityTypeShape EntityType="DB_Entity_UniversidadModel.Table_Profesor_DB" Width="1.5" PointX="3.5" PointY="6" />
         <AssociationConnector Association="DB_Entity_UniversidadModel.FK_Table__Alumno_Materia" />

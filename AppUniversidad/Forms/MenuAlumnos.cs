@@ -17,8 +17,10 @@ namespace AppUniversidad.Forms
     {
         public DB_Universidad dc { get; set; }
         public Table_Alumno_DB alumno { get; set; }
-        public Table_Carreras carreras = new Table_Carreras();
-        public Table_Carrera_Alumno Carrera_Alumno = new Table_Carrera_Alumno();
+        public Table_Carreras carreras { get; set; }
+        public Table_Materias_DB materias { get; set; }
+        public Table_Carrera_Alumno Carrera_Alumno {get; set; }
+        public Table_Materia__Alumno materiaAlumno { get; set; }  
         internal string nameAlumno;
         public MenuAlumnos()
         {
@@ -54,14 +56,16 @@ namespace AppUniversidad.Forms
         {
             InscripcionesCarreras inscripciones = new InscripcionesCarreras();
             inscripciones.alumno = this.alumno;
-            inscripciones.dc = this.dc;
+            inscripciones.carreras = this.carreras;
             inscripciones.Carrera_Alumno = this.Carrera_Alumno;
-            inscripciones.Show();
+            inscripciones.dc = this.dc;
+            inscripciones.ShowDialog();
             actualizarlistas();
         }
 
         private void MenuAlumnos_Load(object sender, EventArgs e)
         {
+            actualizarlistas();
             table_Alumno_DBBindingSource.DataSource = dc.Table_Alumno_DB.FirstOrDefault(data=> data.Usuario == nameAlumno);
             alumno = dc.Table_Alumno_DB.FirstOrDefault(data => data.Usuario == nameAlumno);
         }
@@ -69,6 +73,17 @@ namespace AppUniversidad.Forms
         {
             table_Carrera_AlumnoBindingSource.DataSource = dc.Table_Carrera_Alumno.ToList();
             table_Materia__AlumnoBindingSource.DataSource = dc.Table_Materia__Alumno.ToList();
+        }
+
+        private void materiasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            InscripcionMaterias inscripcionMaterias = new InscripcionMaterias();
+            inscripcionMaterias.alumno = this.alumno;
+            inscripcionMaterias.Materia__Alumno = this.materiaAlumno;
+            inscripcionMaterias.Materias = this.materias;
+            inscripcionMaterias.dc = this.dc;
+            inscripcionMaterias.ShowDialog();
+            actualizarlistas();
         }
     }
 }

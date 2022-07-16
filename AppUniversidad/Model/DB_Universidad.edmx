@@ -71,12 +71,13 @@
           <Property Name="Carrera" Type="varchar" MaxLength="50" />
           <Property Name="id_Materia" Type="int" />
           <Property Name="Materia" Type="varchar" MaxLength="50" />
+          <Property Name="id_Alumno" Type="int" />
         </EntityType>
         <EntityType Name="Table_Materia__Alumno">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_Materias" Type="int" />
           <Property Name="id_Alumnos" Type="int" />
           <Property Name="Nombre_Materia" Type="varchar" MaxLength="50" />
@@ -107,7 +108,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_Alumno" Type="int" />
           <Property Name="id_Profesor" Type="int" />
           <Property Name="Nombre_Profesor" Type="varchar" MaxLength="50" />
@@ -594,6 +595,7 @@
           <Property Name="Carrera" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Table_Carrera_Alumno" Relationship="DB_Entity_UniversidadModel.FK_Table_Carrera_Alumno" FromRole="Table_Carreras" ToRole="Table_Carrera_Alumno" />
           <NavigationProperty Name="Table_Carrera_Alumno1" Relationship="DB_Entity_UniversidadModel.FK_Table_Carrera_Alumno1" FromRole="Table_Carreras" ToRole="Table_Carrera_Alumno" />
+          <Property Name="id_Alumno" Type="Int32" />
         </EntityType>
         <Association Name="FK_Table_Carrera_Materia">
           <End Type="DB_Entity_UniversidadModel.Table_Carreras" Role="Table_Carreras" Multiplicity="0..1" />
@@ -804,6 +806,7 @@
           <EntitySetMapping Name="Table_Carreras">
             <EntityTypeMapping TypeName="DB_Entity_UniversidadModel.Table_Carreras">
               <MappingFragment StoreEntitySet="Table_Carreras">
+                <ScalarProperty Name="id_Alumno" ColumnName="id_Alumno" />
                 <ScalarProperty Name="Carrera" ColumnName="Carrera" />
                 <ScalarProperty Name="Materia" ColumnName="Materia" />
                 <ScalarProperty Name="id_Materia" ColumnName="id_Materia" />

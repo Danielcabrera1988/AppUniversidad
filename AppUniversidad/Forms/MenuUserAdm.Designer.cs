@@ -152,21 +152,21 @@
             // altaProfesor
             // 
             this.altaProfesor.Name = "altaProfesor";
-            this.altaProfesor.Size = new System.Drawing.Size(180, 22);
+            this.altaProfesor.Size = new System.Drawing.Size(122, 22);
             this.altaProfesor.Text = "Profesor";
             this.altaProfesor.Click += new System.EventHandler(this.altaProfesor_Click);
             // 
             // altasAlumno
             // 
             this.altasAlumno.Name = "altasAlumno";
-            this.altasAlumno.Size = new System.Drawing.Size(180, 22);
+            this.altasAlumno.Size = new System.Drawing.Size(122, 22);
             this.altasAlumno.Text = "Alumnos";
             this.altasAlumno.Click += new System.EventHandler(this.altasAlumnos);
             // 
             // altasMateria
             // 
             this.altasMateria.Name = "altasMateria";
-            this.altasMateria.Size = new System.Drawing.Size(180, 22);
+            this.altasMateria.Size = new System.Drawing.Size(122, 22);
             this.altasMateria.Text = "Materia";
             this.altasMateria.Click += new System.EventHandler(this.altaMateria);
             // 
@@ -226,7 +226,7 @@
             // archivoToolStripMenuItem1
             // 
             this.archivoToolStripMenuItem1.Name = "archivoToolStripMenuItem1";
-            this.archivoToolStripMenuItem1.Size = new System.Drawing.Size(115, 22);
+            this.archivoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.archivoToolStripMenuItem1.Text = "Archivo";
             this.archivoToolStripMenuItem1.Click += new System.EventHandler(this.guardarArchivo);
             // 

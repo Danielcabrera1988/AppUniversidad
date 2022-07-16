@@ -121,6 +121,12 @@
     <Compile Include="Forms\InscripcionesCarreras.Designer.cs">
       <DependentUpon>InscripcionesCarreras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InscripcionMaterias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InscripcionMaterias.Designer.cs">
+      <DependentUpon>InscripcionMaterias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\InscripcionesCarreras.resx">
       <DependentUpon>InscripcionesCarreras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InscripcionMaterias.resx">
+      <DependentUpon>InscripcionMaterias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

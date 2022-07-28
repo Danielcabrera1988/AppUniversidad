@@ -59,10 +59,6 @@ namespace AppUniversidad.Forms
 
         private void MenuProfesor_Load(object sender, EventArgs e)
         {
-            if (alumno == null)
-            {
-                alumno = new Table_Alumno_DB();
-            }
             table_Alumno_DBBindingSource.DataSource = dc.Table_Alumno_DB.ToList();
         }
 

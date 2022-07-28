@@ -36,7 +36,6 @@ namespace AppUniversidad
                 txtBoxUser.ForeColor = Color.Black;
             }
         }
-
         private void txtBoxUser_Leave(object sender, EventArgs e)
         {
             if (txtBoxUser.Text == "")
@@ -45,7 +44,6 @@ namespace AppUniversidad
                 txtBoxUser.ForeColor = Color.Gainsboro;
             }
         }
-
         private void txtBoxPass_Enter(object sender, EventArgs e)
         {
             if (txtBoxPass.Text == "CONTRASEÑA")
@@ -64,14 +62,12 @@ namespace AppUniversidad
                 txtBoxPass.UseSystemPasswordChar = false;
             }
         }
-
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             UsuarioNuevo nuevo = new UsuarioNuevo();
             nuevo.Show();
             nuevo.dc = this.dc;
         }
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             //connection.Open();
@@ -143,7 +139,6 @@ namespace AppUniversidad
             txtBoxUser.Text = "";
             txtBoxPass.Text = "";
         }
-
         public static string GetMD5(string str)
         {
             MD5 md5 = MD5CryptoServiceProvider.Create();
@@ -154,7 +149,6 @@ namespace AppUniversidad
             for (int i = 0; i < stream.Length; i++) sb.AppendFormat("{0:x2}", stream[i]);
             return sb.ToString();
         }
-
         private void Login_Load(object sender, EventArgs e)
         {
             connection.Open();

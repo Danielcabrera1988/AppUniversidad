@@ -68,7 +68,7 @@
             this.archivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(730, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(948, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -116,7 +116,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.table_Alumno_DBDataGridView);
-            this.splitContainer1.Size = new System.Drawing.Size(730, 386);
+            this.splitContainer1.Size = new System.Drawing.Size(948, 386);
             this.splitContainer1.SplitterDistance = 138;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -198,7 +198,7 @@
             this.table_Alumno_DBDataGridView.Location = new System.Drawing.Point(0, 0);
             this.table_Alumno_DBDataGridView.Name = "table_Alumno_DBDataGridView";
             this.table_Alumno_DBDataGridView.ReadOnly = true;
-            this.table_Alumno_DBDataGridView.Size = new System.Drawing.Size(588, 386);
+            this.table_Alumno_DBDataGridView.Size = new System.Drawing.Size(806, 386);
             this.table_Alumno_DBDataGridView.TabIndex = 0;
             // 
             // nombreDataGridViewTextBoxColumn
@@ -271,11 +271,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(730, 410);
+            this.ClientSize = new System.Drawing.Size(948, 410);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MenuProfesor";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Profesor";
             this.Load += new System.EventHandler(this.MenuProfesor_Load);

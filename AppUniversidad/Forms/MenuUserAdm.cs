@@ -9,7 +9,7 @@ namespace AppUniversidad.Forms
 {
     public partial class MenuUserAdm : Form
     {
-        private SqlConnection connection = new SqlConnection(@"server = DANIEL\SQLEXPRESS; database = DB_Entity_Universidad; INTEGRATED SECURITY = true;");
+        private SqlConnection connection = new SqlConnection(@"server = DESKTOP-RDKCEBD\SQLEXPRESS; database = DB_Entity_Universidad; INTEGRATED SECURITY = true;");
         public DB_Universidad dc { get; set; }
         public Table_Carreras carreras { get; set; }
         public Table_Profesor_DB profe { get; set; }

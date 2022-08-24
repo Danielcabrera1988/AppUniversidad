@@ -22,7 +22,7 @@ namespace AppUniversidad
         public Table_Materia__Alumno materia__Alumno = new Table_Materia__Alumno();
         public Table_Profesor_Alumno Profesor_Alumno = new Table_Profesor_Alumno();
 
-        internal SqlConnection connection = new SqlConnection(@"server = DANIEL\SQLEXPRESS; database = DB_Entity_Universidad; INTEGRATED SECURITY = true;");
+        internal SqlConnection connection = new SqlConnection(@"server = DESKTOP-RDKCEBD\SQLEXPRESS; database = DB_Entity_Universidad; INTEGRATED SECURITY = true;");
         public Login()
         {
             InitializeComponent();
